@@ -1,0 +1,31 @@
+{
+  "seeds_to_run": [
+    11,
+    22,
+    33
+  ],
+  "hidden_size": 48,
+  "batch_size": 128,
+  "learning_rate": 0.001,
+  "max_epochs_per_task": 20,
+  "min_epochs_per_task": 4,
+  "early_stopping_patience": 3,
+  "min_delta_macro_accuracy": 0.005,
+  "min_delta_validation_loss": 0.001,
+  "validation_fraction": 0.2,
+  "concept_projector_epochs": 100,
+  "concept_projector_lr": 0.05,
+  "concept_distillation_weight": 1.0,
+  "classifier_epochs": 300,
+  "classifier_lr": 0.05,
+  "sparsity_lambda": 0.0007,
+  "pseudo_samples_per_old_class": 0,
+  "concepts_per_new_class": 8,
+  "device": "cuda_if_available",
+  "conditions_to_run": [
+    "LNN_SGD",
+    "CI_CBM_real_only",
+    "CI_CBM_real_plus_pseudo"
+  ],
+  "rerun_completed": false
+}

@@ -1,0 +1,104 @@
+{
+ "note": "descriptive only; 4 top-level units; no n=88 inference, no causal claim",
+ "units": 4,
+ "r1": {
+  "rho": 0.4,
+  "n": 4,
+  "status": "OK",
+  "ties": 0
+ },
+ "r2": {
+  "rho": 0.4,
+  "n": 4,
+  "status": "OK",
+  "ties": 0
+ },
+ "per_dataset": [
+  {
+   "candidate": "R1_analytic_head",
+   "dataset": "uci_har",
+   "s2_endpoint_range_4_mean": 0.044440789445673784,
+   "s2_endpoint_range_4_mean_pp": 4.444078944567378,
+   "test_gain_mean": 0.013490641818618115,
+   "test_gain_mean_pp": 1.3490641818618117,
+   "n_seeds": 8
+  },
+  {
+   "candidate": "R1_analytic_head",
+   "dataset": "wisdm",
+   "s2_endpoint_range_4_mean": 0.07354481764603277,
+   "s2_endpoint_range_4_mean_pp": 7.3544817646032765,
+   "test_gain_mean": -0.08575277302139622,
+   "test_gain_mean_pp": -8.575277302139622,
+   "n_seeds": 8
+  },
+  {
+   "candidate": "R1_analytic_head",
+   "dataset": "uwave",
+   "s2_endpoint_range_4_mean": 0.15104166666666669,
+   "s2_endpoint_range_4_mean_pp": 15.104166666666668,
+   "test_gain_mean": 0.03906250000000001,
+   "test_gain_mean_pp": 3.906250000000001,
+   "n_seeds": 8
+  },
+  {
+   "candidate": "R1_analytic_head",
+   "dataset": "cwru",
+   "s2_endpoint_range_4_mean": 0.0675,
+   "s2_endpoint_range_4_mean_pp": 6.75,
+   "test_gain_mean": -0.09924999999999995,
+   "test_gain_mean_pp": -9.924999999999995,
+   "n_seeds": 8
+  },
+  {
+   "candidate": "R2_pca16_readout",
+   "dataset": "uci_har",
+   "s2_endpoint_range_4_mean": 0.044440789445673784,
+   "s2_endpoint_range_4_mean_pp": 4.444078944567378,
+   "test_gain_mean": -0.010344447950389898,
+   "test_gain_mean_pp": -1.03444479503899,
+   "n_seeds": 8
+  },
+  {
+   "candidate": "R2_pca16_readout",
+   "dataset": "wisdm",
+   "s2_endpoint_range_4_mean": 0.07354481764603277,
+   "s2_endpoint_range_4_mean_pp": 7.3544817646032765,
+   "test_gain_mean": -0.09284847392044421,
+   "test_gain_mean_pp": -9.284847392044421,
+   "n_seeds": 8
+  },
+  {
+   "candidate": "R2_pca16_readout",
+   "dataset": "uwave",
+   "s2_endpoint_range_4_mean": 0.15104166666666669,
+   "s2_endpoint_range_4_mean_pp": 15.104166666666668,
+   "test_gain_mean": 0.03125000000000001,
+   "test_gain_mean_pp": 3.125000000000001,
+   "n_seeds": 8
+  },
+  {
+   "candidate": "R2_pca16_readout",
+   "dataset": "cwru",
+   "s2_endpoint_range_4_mean": 0.0675,
+   "s2_endpoint_range_4_mean_pp": 6.75,
+   "test_gain_mean": -0.10087499999999995,
+   "test_gain_mean_pp": -10.087499999999995,
+   "n_seeds": 8
+  }
+ ],
+ "aggregate_json_rho": {
+  "r1": {
+   "rho": 0.4,
+   "n": 4,
+   "status": "OK",
+   "ties": 0
+  },
+  "r2": {
+   "rho": 0.4,
+   "n": 4,
+   "status": "OK",
+   "ties": 0
+  }
+ }
+}

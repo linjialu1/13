@@ -1,0 +1,111 @@
+{
+  "rule": "validation subjects = sorted(train_subjects)[::5]; NOT reselected by model performance",
+  "val_subjects": [
+    1601,
+    1607,
+    1613,
+    1619,
+    1626,
+    1632,
+    1638,
+    1644
+  ],
+  "train_subjects": [
+    1601,
+    1602,
+    1603,
+    1604,
+    1606,
+    1607,
+    1608,
+    1609,
+    1611,
+    1612,
+    1613,
+    1614,
+    1616,
+    1617,
+    1618,
+    1619,
+    1621,
+    1622,
+    1623,
+    1624,
+    1626,
+    1627,
+    1628,
+    1629,
+    1631,
+    1632,
+    1633,
+    1634,
+    1636,
+    1637,
+    1638,
+    1639,
+    1641,
+    1642,
+    1643,
+    1644,
+    1646,
+    1647,
+    1648,
+    1649
+  ],
+  "subject_intersection_train_val_EXACT": 0,
+  "train_rows": 15014,
+  "val_rows": 3547,
+  "test_rows": 5696,
+  "per_class": [
+    {
+      "class": 0,
+      "train": 2762,
+      "val": 577,
+      "test": 948
+    },
+    {
+      "class": 1,
+      "train": 2582,
+      "val": 661,
+      "test": 871
+    },
+    {
+      "class": 2,
+      "train": 2386,
+      "val": 577,
+      "test": 948
+    },
+    {
+      "class": 3,
+      "train": 2440,
+      "val": 577,
+      "test": 1032
+    },
+    {
+      "class": 4,
+      "train": 2518,
+      "val": 577,
+      "test": 1033
+    },
+    {
+      "class": 5,
+      "train": 2326,
+      "val": 578,
+      "test": 864
+    }
+  ],
+  "test_subjects_from_cache_meta": [
+    1600,
+    1605,
+    1610,
+    1615,
+    1620,
+    1625,
+    1630,
+    1635,
+    1640,
+    1645,
+    1650
+  ],
+  "cost_note": "training rows drop from 18561 to 15014 (-19.1%)"
+}

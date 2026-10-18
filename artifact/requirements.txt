@@ -1,0 +1,4 @@
+# Portable offline scalar/table audit and quantitative figure rendering only.
+numpy>=2.1,<3
+scipy>=1.15,<2
+matplotlib>=3.9,<4

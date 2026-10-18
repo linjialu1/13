@@ -1,0 +1,58 @@
+{
+  "kind": "LOCAL_DETERMINISTIC_RECOMPUTATION_RECEIPT",
+  "date_local": "2026-10-19 Asia/Shanghai",
+  "outputs_compared": 7,
+  "all_byte_identical": true,
+  "independent_model_reproduction": false,
+  "rows": [
+    {
+      "file": "sensitivity_results.json",
+      "bytes": 27594,
+      "sha256": "59f9a0f43d2f9113684a17fe1e79eff1a8a897d3a53a962b963795d14ddc2992",
+      "repeat_sha256": "59f9a0f43d2f9113684a17fe1e79eff1a8a897d3a53a962b963795d14ddc2992",
+      "byte_identical": true
+    },
+    {
+      "file": "source_hashes.json",
+      "bytes": 1304,
+      "sha256": "e34f8633ccb276438d527ced40ac148e247c2ce95590c33cd74867a86f6a28b7",
+      "repeat_sha256": "e34f8633ccb276438d527ced40ac148e247c2ce95590c33cd74867a86f6a28b7",
+      "byte_identical": true
+    },
+    {
+      "file": "sensitivity_all_24_cells.csv",
+      "bytes": 5301,
+      "sha256": "24ff66786aa42e15ded1f9f45eb138aa23bcfb58b602b35dee88ffdb32ec091f",
+      "repeat_sha256": "24ff66786aa42e15ded1f9f45eb138aa23bcfb58b602b35dee88ffdb32ec091f",
+      "byte_identical": true
+    },
+    {
+      "file": "sensitivity_8seed_summary.csv",
+      "bytes": 2480,
+      "sha256": "8e52574fde2037e30c1e56ad9084c785f4b0099c18e23f8a0a1cf8bfd516d82c",
+      "repeat_sha256": "8e52574fde2037e30c1e56ad9084c785f4b0099c18e23f8a0a1cf8bfd516d82c",
+      "byte_identical": true
+    },
+    {
+      "file": "leave_one_out_means.csv",
+      "bytes": 7145,
+      "sha256": "5edc30d5a9673afa17d35242d29ea367d89b8d78b961543234dbf8076db51200",
+      "repeat_sha256": "5edc30d5a9673afa17d35242d29ea367d89b8d78b961543234dbf8076db51200",
+      "byte_identical": true
+    },
+    {
+      "file": "REPORT.md",
+      "bytes": 4484,
+      "sha256": "349125b62c068e7d766a2b13d39ace69ada1ca5256ce7b3f81a07a5c83f6bbd8",
+      "repeat_sha256": "349125b62c068e7d766a2b13d39ace69ada1ca5256ce7b3f81a07a5c83f6bbd8",
+      "byte_identical": true
+    },
+    {
+      "file": "MANUSCRIPT_SUMMARY_EN.md",
+      "bytes": 2303,
+      "sha256": "04d78563f1b43d1116f15eb8800fa078b44308ce3e10400501ee46dd8dbb0c39",
+      "repeat_sha256": "04d78563f1b43d1116f15eb8800fa078b44308ce3e10400501ee46dd8dbb0c39",
+      "byte_identical": true
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+scope,bytes,n_records,note
+final_inference_selected_numeric,14144392,117,arrays that determine the final output
+declared_inference_path_payload,14700704,117,selected + other readout branch + executed original head
+final_inference_selected_numeric_deduplicated,10077976,117,deduplicated by source file + key
+next_task_state_accounted,96720,53,centroids/counts/task ids; not read by the final-test path
+saved_asset_bundle,223019983,117,all saved assets/evidence; not inference I/O

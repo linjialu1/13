@@ -1,0 +1,99 @@
+{
+  "rule": "validation subjects = sorted(train_subjects)[::5]; NOT reselected by model performance",
+  "val_subjects": [
+    1,
+    8,
+    17,
+    25,
+    30
+  ],
+  "subject_intersection_train_val_EXACT": 0,
+  "official_train_test_subject_overlap_EXACT": 0,
+  "train_rows": 5564,
+  "val_rows": 1788,
+  "test_rows": 2947,
+  "per_class": [
+    {
+      "class": 0,
+      "train": 883,
+      "val": 343,
+      "test": 496
+    },
+    {
+      "class": 1,
+      "train": 801,
+      "val": 272,
+      "test": 471
+    },
+    {
+      "class": 2,
+      "train": 733,
+      "val": 253,
+      "test": 420
+    },
+    {
+      "class": 3,
+      "train": 1002,
+      "val": 284,
+      "test": 491
+    },
+    {
+      "class": 4,
+      "train": 1056,
+      "val": 318,
+      "test": 532
+    },
+    {
+      "class": 5,
+      "train": 1089,
+      "val": 318,
+      "test": 537
+    }
+  ],
+  "old_split_rows": [
+    {
+      "task": 1,
+      "class_pair": [
+        0,
+        1
+      ],
+      "train_n": 1655,
+      "val_n": 414,
+      "subject_intersection_EXACT": 21,
+      "subjects_train": 21,
+      "subjects_val": 21,
+      "val_adjacent_rows_ESTIMATE": 379,
+      "val_adjacent_ratio_ESTIMATE": 0.915459
+    },
+    {
+      "task": 2,
+      "class_pair": [
+        2,
+        3
+      ],
+      "train_n": 1636,
+      "val_n": 408,
+      "subject_intersection_EXACT": 21,
+      "subjects_train": 21,
+      "subjects_val": 21,
+      "val_adjacent_rows_ESTIMATE": 367,
+      "val_adjacent_ratio_ESTIMATE": 0.89951
+    },
+    {
+      "task": 3,
+      "class_pair": [
+        4,
+        5
+      ],
+      "train_n": 2003,
+      "val_n": 500,
+      "subject_intersection_EXACT": 21,
+      "subjects_train": 21,
+      "subjects_val": 21,
+      "val_adjacent_rows_ESTIMATE": 455,
+      "val_adjacent_ratio_ESTIMATE": 0.91
+    }
+  ],
+  "row_order_overlap_is_ESTIMATE": "on-disk window positions are not provided by the official dataset; the estimate assumes consecutive rows within a (subject,activity) run are consecutive 50%-overlapping windows",
+  "subject_intersection_is_EXACT": true
+}

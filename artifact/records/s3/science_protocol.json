@@ -1,0 +1,254 @@
+{
+  "status": "PROPOSED_FINAL_FIX1",
+  "round_status": "READY_FOR_REVIEW",
+  "version": "s3_candidate_matrix_v8_fix6",
+  "fixed_by": "admin/REVIEW_s3_protocol_final_20261017.md",
+  "real_compute_this_round": {
+    "model_builds": 0,
+    "forward": 0,
+    "fits": 0,
+    "training": 0,
+    "test_evaluations": 0
+  },
+  "matrix": {
+    "candidates": 6,
+    "datasets": [
+      "uci_har",
+      "wisdm",
+      "uwave",
+      "cwru"
+    ],
+    "cells": 24,
+    "seeds": [
+      11,
+      22,
+      33,
+      44,
+      55,
+      66,
+      77,
+      88
+    ],
+    "screen_seeds": [
+      11,
+      22,
+      33
+    ]
+  },
+  "candidates": {
+    "R1_analytic_head": {
+      "needs_training": false,
+      "seed_schedule": "8 seeds directly",
+      "boundaries": 120,
+      "primary_contrast": "vs S1 saved 300-epoch L1 head",
+      "assets": "REUSES accepted S2 D1 (identity) ridge W/b — 0 new fits, 0 new PCA",
+      "new_fits_this_stage": 0,
+      "prediction": "logits = val_joint(f64) @ W + b over canonical seen columns; argmax ties -> smallest id",
+      "test_stage": "test features generated only in the sealed evaluation stage"
+    },
+    "R2_pca16_readout": {
+      "needs_training": false,
+      "seed_schedule": "8 seeds directly",
+      "boundaries": 120,
+      "primary_contrast": "vs S1 head; SECONDARY paired R2-R1 isolates the PCA effect",
+      "assets": "REUSES accepted S2 D3 PCA mean/components and its ridge W/b — 0 new fits",
+      "ordering_rule": "pseudo features are generated in the ORIGINAL joint space first; the SAME PCA transform is then applied to real+pseudo rows; centroids are never pre-projected before nearest-source selection",
+      "dim_note": "16 fixed by S2 pre-registration; no per-dataset view switching",
+      "naming_note": "PCA readout diagnostic; NOT a reproduction of EASE/CONCIL"
+    },
+    "LN_layernorm_injection": {
+      "needs_training": true,
+      "seed_schedule": "screen 11/22/33 -> promote to all 8",
+      "wiring": "subclass of the real classifier; nn.LayerNorm(48, eps=1e-5, elementwise_affine=True) applied to the encoder SEQUENCE, then the ORIGINAL attention formula",
+      "non_identity_note": "gamma=1/beta=0 still changes values because normalization precedes the affine",
+      "centroids": "candidate-own (its Task1 representation); S1 centroids not reused"
+    },
+    "POOL_mean_pooling": {
+      "needs_training": true,
+      "seed_schedule": "screen -> promote",
+      "wiring": "subclass; temporal attention module REMOVED; representation = mean over time; latent 48, joint 56",
+      "centroids": "candidate-own"
+    },
+    "C1_backbone_freeze": {
+      "needs_training": true,
+      "seed_schedule": "screen -> promote",
+      "question": "Task1 TRAINING DEPTH contrast (not incremental unfreezing)",
+      "mask": "requires_grad = not name.startswith('encoder.rnn_cell.backbone')",
+      "expected_trainable": [
+        "encoder.rnn_cell.ff1.*",
+        "encoder.rnn_cell.ff2.*",
+        "encoder.rnn_cell.time_a.*",
+        "encoder.rnn_cell.time_b.*",
+        "temporal_attention.weight",
+        "head.*"
+      ],
+      "expected_frozen": [
+        "encoder.rnn_cell.backbone.0.weight",
+        "encoder.rnn_cell.backbone.0.bias"
+      ],
+      "after_task1": "freeze every parameter (same as baseline)",
+      "init": "same-seed UNTRAINED CfC initialization (not an S1 checkpoint)",
+      "centroids": "candidate-own"
+    },
+    "C2_gru_backbone": {
+      "needs_training": true,
+      "seed_schedule": "screen -> promote",
+      "wiring": "encoder replaced by nn.GRU(48, 1 layer, unidirectional, batch_first) returning the FULL sequence; SAME baseline attention formula on that sequence; latent 48, joint 56",
+      "centroids": "candidate-own",
+      "comparison_note": "same seed/protocol performance comparison; parameter and compute differences reported"
+    }
+  },
+  "attention_formula_baseline": "scores = temporal_attention(torch.tanh(sequence)); weights = softmax(scores, dim=time); rep = sum(weights * sequence)",
+  "screening": {
+    "measure": "candidate final-task ALL-seen validation macro minus the same-seed S1 saved-head validation macro",
+    "s1_reference_spec": "S1 saved float32 head weights/bias; S2 float32 val joint; batch 256; CUDA float32 linear; columns = canonical seen ascending; argmax ties -> smallest id",
+    "promotion": "all three of seeds 11/22/33 strictly > 0",
+    "failure_state": "SCREEN_FAIL with the 3 diffs, reason and budget; no zero fill, no df7, not mechanism-failure evidence",
+    "test_isolation": "test is read only after training + selection are sealed",
+    "budget": {
+      "screen_groups": 48,
+      "screen_boundaries": 180,
+      "head_updates": 54000,
+      "encoder_updates_upper_bound": 8496,
+      "task1_batches_per_epoch": {
+        "uci_har": 14,
+        "wisdm": 42,
+        "uwave": 1,
+        "cwru": 2
+      },
+      "all_16_cells_promoted": {
+        "groups": 128,
+        "boundaries": 480,
+        "head_updates": 144000
+      }
+    }
+  },
+  "statistics": {
+    "main_matrix": "8-seed cells: two-sided paired t95 (df7), NOMINAL interval",
+    "holm_family": 24,
+    "holm_formula": "p_adj(i) = min(1, max_{j<=i} [(24 - j + 1) * p_(j)]) over the r cells that actually reached 8 seeds, sorted ascending",
+    "null_rule": "cells without 8 seeds: raw and adjusted p are null; no rejection claim",
+    "degenerate": {
+      "zero_diff_sd0": "p = 1",
+      "constant_nonzero_sd0": "p = 0, flag DEGENERATE_SAMPLE"
+    },
+    "scope_note": "these describe the fixed seed sample only; not population inference",
+    "s4": {
+      "top_level_units": 4,
+      "primary_quantity": "per-dataset endpoint range_4 mean over 8 seeds vs per-dataset R1 and R2 endpoint test macro paired gain mean over 8 seeds",
+      "test": "Spearman rho across the 4 datasets with AVERAGE RANKS for ties; constant variable -> rho null, status UNDEFINED_CONSTANT",
+      "hypothesis": "higher sensitivity tends to co-occur with larger readout-candidate gain (EXPLORATORY, descriptive)",
+      "forbidden": [
+        "n=88 inference",
+        "cross-domain predictive claim",
+        "mixing R2-R1 into the 24-item confirmatory family"
+      ],
+      "r2_minus_r1": "separate descriptive contrast"
+    },
+    "baseline_A_gate": "reported per its original registered definition, with the multiple-comparison correction listed alongside"
+  },
+  "execution": {
+    "python": "${USER_HOME}/anaconda3/python.exe -B",
+    "device": "CUDA required",
+    "threads": {
+      "OMP_NUM_THREADS": 4,
+      "MKL_NUM_THREADS": 4,
+      "OPENBLAS_NUM_THREADS": 4
+    },
+    "process_split": "torch and numpy compute must run in SEPARATE processes on this machine (libiomp/MKL clash); no KMP_DUPLICATE_LIB_OK",
+    "measure": [
+      "wall time",
+      "RSS (or NOT_MEASURED)",
+      "GPU peak",
+      "parameter bytes",
+      "persistent/transient bytes",
+      "hook-counted forwards incl. the original head"
+    ],
+    "stop_on": [
+      "gate rejection",
+      "non-finite values",
+      "hash drift",
+      "existing output",
+      "incomplete stage"
+    ],
+    "no_overwrite": true
+  },
+  "cli": {
+    "entry": "src/trunk/s3_cli_fix6.py",
+    "lock_writer": "src/trunk/s3_lock_fix6.py",
+    "gate": "src/trunk/execution_gate_v7.py"
+  },
+  "s2_negative_result_preserved": "W/B = 1.0312387176, strict W<B FAIL, descriptive downgrade",
+  "aggregation": {
+    "paired_gain": "candidate_test_macro − SAME-SEED S1 accepted test macro (subtract first, then statistics)",
+    "per_seed_output": [
+      "candidate raw",
+      "S1 baseline raw",
+      "paired gain"
+    ],
+    "main_8seed": [
+      "mean",
+      "sample SD",
+      "t95 (df7, nominal)",
+      "strictly positive count",
+      "raw p",
+      "Holm(24) adjusted p"
+    ],
+    "screen_fail": "main p and CI are null; 3-seed screen is not 8-seed evidence",
+    "degenerate": {
+      "zero_diff_sd0": "p=1",
+      "constant_nonzero_sd0": "p=0, DEGENERATE_SAMPLE"
+    },
+    "r2_minus_r1": "separate descriptive paired contrast",
+    "s4": "endpoint range_4 8-seed mean vs readout gain 8-seed mean, Spearman across 4 datasets, average ranks, constant -> rho null/UNDEFINED_CONSTANT",
+    "range_check": "every accuracy must be finite and within [0,1]; otherwise the run fails"
+  },
+  "lifecycle": {
+    "cells": 24,
+    "readout": "8 seeds -> auto COMPLETE",
+    "training": "seeds 11/22/33 only until PROMOTED; then the remaining five",
+    "screen_fail": "no expansion, terminal",
+    "seal": "all 24 terminal, exact seed sets, asset hashes re-verified",
+    "evaluate": "seal + protocol + every asset hash re-verified before any test read"
+  },
+  "interface_contracts": {
+    "make_joint": "returns (joint, latent, desc_raw, desc_std); extract_joint returns joint ONLY",
+    "freeze": "acbm_interface.freeze_representation + zero_grad + signature unchanged + grads None",
+    "counters": [
+      "encoder_forwards",
+      "encoder_backward",
+      "encoder_optimizer_steps",
+      "head_forwards",
+      "head_backward",
+      "head_optimizer_steps",
+      "original_head_forwards",
+      "sparse_head_fits",
+      "head_epochs",
+      "gradient_updates",
+      "test_forwards"
+    ],
+    "run_order": "validation computed in memory -> result.json written atomically AFTER success",
+    "evaluate": "receives the seal-verified per-seed record (model_path + per_task); seed is int",
+    "device": "resolve_device(): CUDA required; CPU only for labelled engineering tests",
+    "gate": "Gate(exec_dir, S1) with repo ROOT; verifies science/report/locker bindings"
+  },
+  "cli_entry": {
+    "lock": "src/trunk/s3_lock_fix6.py",
+    "lifecycle": "src/trunk/s3_cli_fix6.py",
+    "report": "src/trunk/s3_selftest_fix6.py",
+    "gate": "src/trunk/execution_gate_v7.py"
+  },
+  "precision_note": "validation heads compute in float32 and are stored as float64 arrays; test evidence stores each branch's ACTUAL compute dtype (ridge=float64, trained head=float32); numeric algorithms unchanged",
+  "counters": {
+    "gradient_updates": "measured by a counting Adam on encoder steps",
+    "head_forwards": "counted once by the accepted fit_sparse_head",
+    "test_forwards": "incremented per test inference call"
+  },
+  "test_evidence": {
+    "logits": "real score matrix [n_rows, n_seen]",
+    "no_overwrite": true,
+    "products_bind": "per-seed NPZ hashes",
+    "r1_r2_compute_dtype": "float64",
+    "trained_compute_dtype": "float32"
+  }
+}

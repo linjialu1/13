@@ -1,0 +1,11 @@
+item,value,source
+python,3.13.5,evaluation_phase_plan.json:device_and_software
+platform,Windows-11-10.0.26300-SP0,evaluation_phase_plan.json:device_and_software
+numpy,2.1.3,evaluation_phase_plan.json:device_and_software
+scipy,1.15.3,evaluation_phase_plan.json:device_and_software
+torch,2.14.0+cu130,evaluation_phase_plan.json:device_and_software
+torch_cuda_build,13.0,evaluation_phase_plan.json:device_and_software
+cudnn,92400,evaluation_phase_plan.json:device_and_software
+gpu_name,NVIDIA GeForce RTX 4060 Laptop GPU,evaluation_phase_plan.json:device_and_software
+device_used_by_protocol,cuda,evaluation_phase_plan.json:device_and_software
+eval_batch,256,evaluation_phase_plan.json:device_and_software

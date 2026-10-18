@@ -1,0 +1,16 @@
+cell,candidate,dataset,n_seeds,mean_gain_pp,sd_gain_pp,strictly_positive,ci95_low_pp,ci95_high_pp,raw_p,holm24_p,note
+C1_backbone_freeze__cwru,C1_backbone_freeze,cwru,3,0.2833,0.7974,1,null,null,null,null,descriptive only; screened out at 3 seeds
+C1_backbone_freeze__uci_har,C1_backbone_freeze,uci_har,3,-2.0348,0.3382,0,null,null,null,null,descriptive only; screened out at 3 seeds
+C1_backbone_freeze__uwave,C1_backbone_freeze,uwave,3,-1.4583,5.6279,1,null,null,null,null,descriptive only; screened out at 3 seeds
+C2_gru_backbone__cwru,C2_gru_backbone,cwru,3,-0.2667,1.1405,1,null,null,null,null,descriptive only; screened out at 3 seeds
+C2_gru_backbone__uci_har,C2_gru_backbone,uci_har,3,2.3873,1.5817,3,null,null,null,null,descriptive only; screened out at 3 seeds
+C2_gru_backbone__uwave,C2_gru_backbone,uwave,3,-14.3750,5.1633,0,null,null,null,null,descriptive only; screened out at 3 seeds
+C2_gru_backbone__wisdm,C2_gru_backbone,wisdm,3,1.9391,2.5971,2,null,null,null,null,descriptive only; screened out at 3 seeds
+LN_layernorm_injection__cwru,LN_layernorm_injection,cwru,3,-0.4000,0.9539,1,null,null,null,null,descriptive only; screened out at 3 seeds
+LN_layernorm_injection__uci_har,LN_layernorm_injection,uci_har,3,-1.2127,1.4642,1,null,null,null,null,descriptive only; screened out at 3 seeds
+LN_layernorm_injection__uwave,LN_layernorm_injection,uwave,3,1.6667,6.5873,2,null,null,null,null,descriptive only; screened out at 3 seeds
+LN_layernorm_injection__wisdm,LN_layernorm_injection,wisdm,3,-3.7769,3.3579,0,null,null,null,null,descriptive only; screened out at 3 seeds
+POOL_mean_pooling__cwru,POOL_mean_pooling,cwru,3,-0.0500,0.2179,2,null,null,null,null,descriptive only; screened out at 3 seeds
+POOL_mean_pooling__uci_har,POOL_mean_pooling,uci_har,3,-2.7509,0.8038,0,null,null,null,null,descriptive only; screened out at 3 seeds
+POOL_mean_pooling__uwave,POOL_mean_pooling,uwave,3,2.9167,2.4273,3,null,null,null,null,descriptive only; screened out at 3 seeds
+POOL_mean_pooling__wisdm,POOL_mean_pooling,wisdm,3,0.7453,4.1122,2,null,null,null,null,descriptive only; screened out at 3 seeds

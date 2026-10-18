@@ -1,0 +1,30 @@
+{
+  "analysis_type": "POST_HOC_SECONDARY_SAVED_PAIR_SENSITIVITY",
+  "preregistered": false,
+  "primary_results_seen_before_plan": true,
+  "plan_sha256": "16f937c8f4013832d2b9bc2094f227c0c04730ee72bc55412bf63ab5dce07728",
+  "source_sha256_before": {
+    "test_per_seed_raw.csv": "30723dda78f6e83ff3904be45a6213779d4b77b56c12a662d64f9dc9d9beef92",
+    "test_main_table.json": "844248f68c5aef5ff07d8cced4ae86300b98be9ff18eddb47677c099caaaa39b"
+  },
+  "source_sha256_after": {
+    "test_per_seed_raw.csv": "30723dda78f6e83ff3904be45a6213779d4b77b56c12a662d64f9dc9d9beef92",
+    "test_main_table.json": "844248f68c5aef5ff07d8cced4ae86300b98be9ff18eddb47677c099caaaa39b"
+  },
+  "sources_unchanged": true,
+  "script_sha256": "ea8ea09d80345fbb96e5d526e2d518cb58fea21abd74f008aaae544d45db77a5",
+  "paired_rows": 117,
+  "cells_total": 24,
+  "eight_seed_descriptive_cells": 9,
+  "secondary_sign_test_cells": 8,
+  "three_seed_descriptive_cells": 15,
+  "leave_one_out_rows": 72,
+  "secondary_holm_family": 24,
+  "secondary_reserved_nonrejection_slots": 16,
+  "minimum_two_sided_sign_p_n8": 0.0078125,
+  "minimum_possible_holm24_sign_p_n8": 0.1875,
+  "alpha": 0.05,
+  "primary_t_holm_results_changed": false,
+  "training_or_forward_passes": 0,
+  "independent_model_reproduction": false
+}

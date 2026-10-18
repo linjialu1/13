@@ -1,0 +1,134 @@
+{
+  "status": "PROPOSED",
+  "revision": 3,
+  "not_locked_warning": "草案，未锁定。锁定必须在 S1 任何训练之前完成；锁定后不得再改。",
+  "supersedes": "experiments/baselines/trunk_baseline_protocol_revision/protocol_proposed.json (revision 2)",
+  "errata_applied": "experiments/baselines/trunk_data_preflight/ERRATA_round3.md (E4/E5/E6)",
+  "created": "2026-10-15",
+  "output_dir": "experiments/baselines/trunk_data_preflight",
+  "confirmed_facts": [
+    "WISDM 逐行溯源已重建并与缓存逐位一致（标签/顺序/归一化，train 与 test 双侧残差均为 0.000e+00）",
+    "WISDM 训练/验证原始采样区间重叠率 91.22% / 92.01% / 90.83%（区间精确，非估计）",
+    "UCI-HAR 训练/验证受试者交集 21/21（精确）；行序相邻约 91%（估计）",
+    "CWRU 十类容量在 100/20 目标 + 1024 隔离带下全部可行；三集合两两区间交集均为 0",
+    "UWave 每条样本为独立试次、无子窗口；缓存内无完全重复序列；无受试者标识"
+  ],
+
+  "verified_wisdm_provenance": {
+    "replay_crosscheck": {"rebuilt_train": 18561, "rebuilt_test": 5696, "cache_train": 18561, "cache_test": 5696},
+    "label_order_match": true,
+    "normalization_residual": {"train": 0.0, "test": 0.0, "archived_loader_bound": 2e-5},
+    "per_channel_mean": [0.148177, -2.405641, -0.090788],
+    "per_channel_std": [6.241016, 8.012488, 4.947406],
+    "row_mapping_artifact": "wisdm_row_provenance.csv (24257 rows: cache_row, split, subject, source_file, segment, segment_code, window_in_segment, start_sample, end_sample, activity)",
+    "old_split_used": "experiments/archive/2026-10-15/rls_analytic_classifier_offline/wisdm/split_indices.npz",
+    "interval_rule": "overlap iff same source_file AND same segment AND half-open [start,end) intersect",
+    "row_index_adjacency_forbidden": true
+  },
+
+  "split_leakage_summary": {
+    "wisdm": {"val_overlapping_train_ratio": [0.912236, 0.920074, 0.908333], "subjects_in_both": 40, "measure": "interval exact"},
+    "uci_har": {"val_adjacent_ratio_ESTIMATE": [0.915459, 0.899510, 0.910000], "subjects_in_both": 21, "measure": "subject exact; row-order estimate"},
+    "cwru": {"old_random_split_val_overlapping_ratio": 0.6413, "measure": "interval exact (manifest-recovered)"},
+    "conclusion": "all three datasets leak at ~60-92%; grouped or guarded splits are mandatory"
+  },
+
+  "fixed_splits": {
+    "rule_frozen": "validation subjects / segments chosen ONCE; NEVER reselected by model performance",
+    "uci_har": {"rule": "sorted(train_subjects)[::5]", "val_subjects": [1, 8, 17, 25, 30],
+                "train_rows": 5564, "val_rows": 1788, "test_rows": 2947,
+                "subject_intersection": 0, "artifact": "uci_har_fixed_split.npz",
+                "per_class": "uci_har_per_class_counts.csv"},
+    "wisdm": {"rule": "sorted(train_subjects)[::5]", "val_subjects": [1601, 1607, 1613, 1619, 1626, 1632, 1638, 1644],
+              "train_rows": 15014, "val_rows": 3547, "test_rows": 5696,
+              "subject_intersection": 0, "artifact": "wisdm_fixed_split.npz",
+              "per_class": "wisdm_per_class_counts.csv",
+              "cost": "training rows drop 18561 -> 15014 (-19.1%)"},
+    "uwave": {"rule": "original train/test boundary KEPT; per class 20% of the ORIGINAL TRAIN set, fixed seed",
+              "seed": 20261015, "train_rows": 96, "val_rows": 24, "test_rows": 320,
+              "artifact": "uwave_fixed_split.npz", "per_class": "uwave_per_class_counts.csv",
+              "duplicate_check": {"within_train": 0, "within_test": 0, "train_test_cross": 0},
+              "caveat": "no exact duplicates found does NOT imply subject independence; subject ids are absent"},
+    "cwru": {"tasks": [[0, 1], [2, 3], [4, 5], [6, 7], [8, 9]], "window": 1024, "stride": 512, "guard": 1024,
+             "target_train_per_class": 100, "target_val_per_class": 20, "test_windows_per_class": 200,
+             "sampling_seed": 20261015, "all_classes_feasible": true,
+             "intersections": {"train_vs_validation": 0, "train_vs_test": 0, "validation_vs_test": 0},
+             "artifacts": ["cwru_capacity.csv", "cwru_window_index.csv", "cwru_per_class_counts.csv",
+                           "cwru_interval_intersection.json"],
+             "declaration": "same-record time-segment evaluation; NOT independent-record generalization",
+             "not_inherited": ["LTTSNet 100/10-shot budget", "unlabelled arrays", "subset / _10shot variants"]}
+  },
+
+  "preprocessing": {
+    "rule": "split first, then fit. Statistics from the Task 1 REAL training split only, per channel, then frozen across tasks.",
+    "excludes": ["validation rows", "probe", "future-task rows"],
+    "not_carried_over": "the historical per-task refit normalization scheme is NOT used",
+    "computed_this_round": {
+      "uci_har": {"source": "raw Inertial Signals", "fit_rows": 5564, "granularity": "per channel",
+                  "per_channel_mean": [-0.000516, -0.000206, -0.000402, -0.003606, 0.000167, 0.000585, 0.798269, 0.029907, 0.078845]},
+      "wisdm": {"source": "RAW windows replayed from wisdm.zip for Task-1 train rows", "fit_rows": 5344,
+                "granularity": "per channel",
+                "per_channel_mean": [0.589583, -2.758884, -0.419696]},
+      "uwave": {"status": "CACHE_ONLY", "fit_rows": 24,
+                "must_refit_from": "raw .ts parsed values for the same rows"},
+      "cwru": {"status": "NOT_COMPUTED_THIS_ROUND",
+               "must_refit_from": "raw .mat signals for the built Task-1 train windows"}
+    },
+    "descriptors": {
+      "decided": false,
+      "uci_har": "existing raw_concept_features usable (acc/gyro/total_acc, 50 Hz)",
+      "wisdm": "existing wisdm_sensor_concepts usable (3-axis accel, 20 Hz)",
+      "uwave": "NOT decided -- needs definition or an explicit 'no descriptor' decision; sampling rate not registered",
+      "cwru": "NOT decided -- single channel; axis_share / magnitude descriptors undefined; sampling rate not registered",
+      "required_interfaces": [
+        "descriptor(x_raw) -> (n, k) using that dataset's real channels only",
+        "descriptor standardization fitted on the Task 1 training split, per descriptor, then frozen",
+        "sampling rate must be registered before any spectral descriptor is used",
+        "no model instantiated this round"
+      ]
+    }
+  },
+
+  "acbm_baseline_corrections": {
+    "E5": "ACBM's L1 sparse readout head is GRADIENT-TRAINED (Adam, lr 0.05, fixed 300 epochs, no early stopping). The phrase 'CPU float64 analytic head' belongs ONLY to the RLS rounds and must not describe ACBM.",
+    "E6": "BALANCED_CBM_EXAMPLES_PER_CLASS = 128 applies to balanced_indices(), NOT to pooled_shift. pooled_shift uses ALL real training samples of the selected nearest source class.",
+    "observed_pseudo_counts": {"uci_har": {"task1": 0, "task2": 4306, "task3": 8638},
+                               "wisdm": {"task1": 0, "task2": 4306, "task3": 8638},
+                               "rule": "report as per-dataset/per-task OBSERVED values; do not set a universal constant"},
+    "encoder_budget": {"min_epochs": 3, "max_epochs": 12, "patience": 2, "lr": 0.001, "batch": 128, "early_stopping": true},
+    "readout_budget": {"epochs": 300, "lr": 0.05, "sparsity_lambda": 0.0007, "early_stopping": false},
+    "two_budgets_must_stay_separate": true
+  },
+
+  "task_layout": {
+    "UCI-HAR": {"n_tasks": 3, "class_groups": [[0, 1], [2, 3], [4, 5]]},
+    "WISDM_local_6class": {"n_tasks": 3, "class_groups": [[0, 1], [2, 3], [4, 5]]},
+    "UWave": {"n_tasks": 4, "class_groups": [[0, 1], [2, 3], [4, 5], [6, 7]]},
+    "CWRU": {"n_tasks": 5, "class_groups": [[0, 1], [2, 3], [4, 5], [6, 7], [8, 9]]}
+  },
+
+  "window_overlap_policy": {
+    "rule": "do NOT convert 50% window overlap into an effective sample size",
+    "hard_constraints": ["never shorten or drop the guard", "never fall back to random window splitting",
+                         "always emit explicit interval-intersection counts across all set pairs",
+                         "CWRU keeps the same-record limitation; never claim record-level generalization"]
+  },
+
+  "metrics_and_reporting": {
+    "baseline_reporting": "8-seed mean, sample SD (ddof=1) and an appropriate interval reported separately; no fabricated paired differences without a candidate",
+    "candidate_pairing_rule": "every candidate pairs with the SAME dataset, SAME split, SAME seed baseline",
+    "budget_fields": ["persistent_bytes", "G_bytes", "Q_bytes", "replay_samples", "parameter_count", "peak_working_memory(new)"]
+  },
+
+  "unresolved": [
+    "UWave / CWRU descriptors undecided; UWave and CWRU sampling rates unregistered",
+    "load_uwave cache branch performs no verification",
+    "UWave validation set is only 3 samples per class",
+    "CWRU unlabelled rows (120) location and usage",
+    "CWRU subset / _10shot variant selection rules (not audited; not used this round)",
+    "the previous round's WISDM adjacency script was not saved to disk; its exact code is unrecoverable from artefacts",
+    "whether historical UCI-HAR/WISDM results may be reused under the stricter Task-1-only normalization"
+  ],
+
+  "round_counts": {"training": 0, "model_forward": 0, "performance_evaluation": 0, "parameter_selection": 0}
+}

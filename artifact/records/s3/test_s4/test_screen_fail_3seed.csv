@@ -1,0 +1,16 @@
+cell,candidate,dataset,state,n_seeds,seeds,mean_gain,mean_gain_pp,sd_gain,strictly_positive,stat_state
+C1_backbone_freeze__cwru,C1_backbone_freeze,cwru,SCREEN_FAIL,3,11 22 33,0.002833,0.283333,0.007974,1,NULL_THREE_SEED_DESCRIPTIVE
+C1_backbone_freeze__uci_har,C1_backbone_freeze,uci_har,SCREEN_FAIL,3,11 22 33,-0.020348,-2.034812,0.003382,0,NULL_THREE_SEED_DESCRIPTIVE
+C1_backbone_freeze__uwave,C1_backbone_freeze,uwave,SCREEN_FAIL,3,11 22 33,-0.014583,-1.458333,0.056279,1,NULL_THREE_SEED_DESCRIPTIVE
+C2_gru_backbone__cwru,C2_gru_backbone,cwru,SCREEN_FAIL,3,11 22 33,-0.002667,-0.266667,0.011405,1,NULL_THREE_SEED_DESCRIPTIVE
+C2_gru_backbone__uci_har,C2_gru_backbone,uci_har,SCREEN_FAIL,3,11 22 33,0.023873,2.387266,0.015817,3,NULL_THREE_SEED_DESCRIPTIVE
+C2_gru_backbone__uwave,C2_gru_backbone,uwave,SCREEN_FAIL,3,11 22 33,-0.14375,-14.375,0.051633,0,NULL_THREE_SEED_DESCRIPTIVE
+C2_gru_backbone__wisdm,C2_gru_backbone,wisdm,SCREEN_FAIL,3,11 22 33,0.019391,1.939055,0.025971,2,NULL_THREE_SEED_DESCRIPTIVE
+LN_layernorm_injection__cwru,LN_layernorm_injection,cwru,SCREEN_FAIL,3,11 22 33,-0.004,-0.4,0.009539,1,NULL_THREE_SEED_DESCRIPTIVE
+LN_layernorm_injection__uci_har,LN_layernorm_injection,uci_har,SCREEN_FAIL,3,11 22 33,-0.012127,-1.212746,0.014642,1,NULL_THREE_SEED_DESCRIPTIVE
+LN_layernorm_injection__uwave,LN_layernorm_injection,uwave,SCREEN_FAIL,3,11 22 33,0.016667,1.666667,0.065873,2,NULL_THREE_SEED_DESCRIPTIVE
+LN_layernorm_injection__wisdm,LN_layernorm_injection,wisdm,SCREEN_FAIL,3,11 22 33,-0.037769,-3.776864,0.033579,0,NULL_THREE_SEED_DESCRIPTIVE
+POOL_mean_pooling__cwru,POOL_mean_pooling,cwru,SCREEN_FAIL,3,11 22 33,-0.0005,-0.05,0.002179,2,NULL_THREE_SEED_DESCRIPTIVE
+POOL_mean_pooling__uci_har,POOL_mean_pooling,uci_har,SCREEN_FAIL,3,11 22 33,-0.027509,-2.750892,0.008038,0,NULL_THREE_SEED_DESCRIPTIVE
+POOL_mean_pooling__uwave,POOL_mean_pooling,uwave,SCREEN_FAIL,3,11 22 33,0.029167,2.916667,0.024273,3,NULL_THREE_SEED_DESCRIPTIVE
+POOL_mean_pooling__wisdm,POOL_mean_pooling,wisdm,SCREEN_FAIL,3,11 22 33,0.007453,0.745321,0.041122,2,NULL_THREE_SEED_DESCRIPTIVE

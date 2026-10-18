@@ -1,0 +1,317 @@
+{
+  "palette": "D selected by user: navy #1A3A5C / coral #E05A47 / sand #D4A96A",
+  "skill": "${USER_HOME}/.codex/skills/academic-figure-prompt/SKILL.md",
+  "inputs": [
+    {
+      "path": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\test_s4\\test_per_seed_raw.csv",
+      "sha256": "30723dda78f6e83ff3904be45a6213779d4b77b56c12a662d64f9dc9d9beef92"
+    },
+    {
+      "path": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\test_s4\\test_main_table.json",
+      "sha256": "844248f68c5aef5ff07d8cced4ae86300b98be9ff18eddb47677c099caaaa39b"
+    },
+    {
+      "path": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\expand_8seed_record.json",
+      "sha256": "c5b6a55445f0368a8fa2e383b0d07e9711d5b6a3f2c2bec1da9f517dfb606bd5"
+    },
+    {
+      "path": "${PROJECT_ROOT}\\paper\\draft\\c_evaluation_figure_redesign_v1_8_20261018\\tables\\s4_units.csv",
+      "sha256": "f167337391297af1480a8249d526fac014bfd1cfbe0c797de4511b099ab5ee18"
+    },
+    {
+      "path": "${PROJECT_ROOT}\\paper\\draft\\c_evaluation_codex_revision_v1_7_20261018\\main.tex",
+      "sha256": "a54f59fbc58e02988fe42b6f8596b4874bfbc9b8c9c6705bf9f95482a7b06084"
+    },
+    {
+      "path": "${PROJECT_ROOT}\\paper\\draft\\c_evaluation_figure_redesign_v1_8_20261018\\FIGURE_PROMPTS.md",
+      "sha256": "98550ed1ef7cb9937e74696322c84c5a27bc74e5c15be0882ba73f620f6604ad"
+    },
+    {
+      "path": "${PROJECT_ROOT}\\src\\analysis\\redesign_paper_figures_v18.py",
+      "sha256": "3812c944cf8d72e67d9595fc08e0f90fc36672f3d0b81f5757e92c8dd1fcf292"
+    }
+  ],
+  "figure2_rows": [
+    {
+      "cell": "R1_analytic_head__uci_har",
+      "seed_gains_pp": [
+        2.026680635253486,
+        1.3224832561590238,
+        2.0067078114518355,
+        1.0169059089349286,
+        0.6103451717823449,
+        -0.8446460056063421,
+        2.476218591994883,
+        2.1778180849243323
+      ],
+      "mean_pp": 1.3490641818618117,
+      "nominal_ci_pp": [
+        0.43772604407169413,
+        2.260402319651929
+      ],
+      "holm_p": 0.179782648519
+    },
+    {
+      "cell": "R2_pca16_readout__uci_har",
+      "seed_gains_pp": [
+        0.3868082117963412,
+        -2.939315279807153,
+        -0.08665602194252164,
+        -0.2731542132015985,
+        -1.1433501323984019,
+        -2.804724918208712,
+        0.7396521673728285,
+        -2.1548181739227013
+      ],
+      "mean_pp": -1.03444479503899,
+      "nominal_ci_pp": [
+        -2.2449139748584717,
+        0.17602438478049182
+      ],
+      "holm_p": 1.0
+    },
+    {
+      "cell": "R1_analytic_head__wisdm",
+      "seed_gains_pp": [
+        -13.579530000492856,
+        -8.573719494432419,
+        -4.981208026481887,
+        -8.759605781168855,
+        -7.807802479782877,
+        -6.747389372226264,
+        -9.021305883311271,
+        -9.131657379220549
+      ],
+      "mean_pp": -8.575277302139622,
+      "nominal_ci_pp": [
+        -10.633620055932088,
+        -6.516934548347156
+      ],
+      "holm_p": 0.000566720529
+    },
+    {
+      "cell": "R2_pca16_readout__wisdm",
+      "seed_gains_pp": [
+        -8.414896093885393,
+        -9.262473005469241,
+        -8.83284351001291,
+        -13.761976835142264,
+        -8.89083830400238,
+        -4.20243474323605,
+        -10.343145904740448,
+        -10.570170739866679
+      ],
+      "mean_pp": -9.284847392044421,
+      "nominal_ci_pp": [
+        -11.513939716690084,
+        -7.055755067398758
+      ],
+      "holm_p": 0.000566720529
+    },
+    {
+      "cell": "R1_analytic_head__uwave",
+      "seed_gains_pp": [
+        7.812500000000005,
+        4.375000000000001,
+        1.8750000000000044,
+        6.25,
+        0.9374999999999967,
+        2.187499999999998,
+        3.437499999999999,
+        4.375000000000001
+      ],
+      "mean_pp": 3.906250000000001,
+      "nominal_ci_pp": [
+        1.976283240652944,
+        5.836216759347057
+      ],
+      "holm_p": 0.039967325678
+    },
+    {
+      "cell": "R2_pca16_readout__uwave",
+      "seed_gains_pp": [
+        6.874999999999998,
+        4.062500000000002,
+        1.5625,
+        5.000000000000004,
+        -0.3124999999999989,
+        2.187499999999998,
+        3.437499999999999,
+        2.1875000000000036
+      ],
+      "mean_pp": 3.125000000000001,
+      "nominal_ci_pp": [
+        1.2671109350733063,
+        4.982889064926694
+      ],
+      "holm_p": 0.101498396472
+    },
+    {
+      "cell": "R1_analytic_head__cwru",
+      "seed_gains_pp": [
+        -6.850000000000012,
+        -8.250000000000012,
+        -13.099999999999989,
+        -15.899999999999991,
+        -5.699999999999983,
+        -8.749999999999991,
+        -8.999999999999986,
+        -11.849999999999994
+      ],
+      "mean_pp": -9.924999999999995,
+      "nominal_ci_pp": [
+        -12.783496529473414,
+        -7.066503470526577
+      ],
+      "holm_p": 0.001621371372
+    },
+    {
+      "cell": "R2_pca16_readout__cwru",
+      "seed_gains_pp": [
+        -7.050000000000011,
+        -8.450000000000014,
+        -13.099999999999989,
+        -15.899999999999991,
+        -5.899999999999983,
+        -9.049999999999992,
+        -9.049999999999992,
+        -12.199999999999989
+      ],
+      "mean_pp": -10.087499999999995,
+      "nominal_ci_pp": [
+        -12.894602201522964,
+        -7.280397798477025
+      ],
+      "holm_p": 0.001361597741
+    }
+  ],
+  "figure3_rows": [
+    {
+      "seed": 11,
+      "validation_gain_pp": 0.03875360188233534,
+      "test_gain_pp": -6.035265398054534
+    },
+    {
+      "seed": 22,
+      "validation_gain_pp": 3.1447567194988757,
+      "test_gain_pp": -1.6825652464731444
+    },
+    {
+      "seed": 33,
+      "validation_gain_pp": 3.7527585672800012,
+      "test_gain_pp": -0.08709388589908107
+    },
+    {
+      "seed": 44,
+      "validation_gain_pp": -0.1809824235705526,
+      "test_gain_pp": -0.29027720673100443
+    },
+    {
+      "seed": 55,
+      "validation_gain_pp": -2.160478451587189,
+      "test_gain_pp": -0.6054661666505035
+    },
+    {
+      "seed": 66,
+      "validation_gain_pp": 10.789650446696442,
+      "test_gain_pp": 2.5782531726121105
+    },
+    {
+      "seed": 77,
+      "validation_gain_pp": 5.954340764948207,
+      "test_gain_pp": 3.170380169811815
+    },
+    {
+      "seed": 88,
+      "validation_gain_pp": 5.058697446462535,
+      "test_gain_pp": -0.3939846496896493
+    }
+  ],
+  "figure4_rows": [
+    {
+      "candidate": "R1_analytic_head",
+      "dataset": "uci_har",
+      "s2_range4_mean_pp": "4.4441",
+      "test_gain_mean_pp": "1.3491",
+      "n_seeds": "8"
+    },
+    {
+      "candidate": "R1_analytic_head",
+      "dataset": "wisdm",
+      "s2_range4_mean_pp": "7.3545",
+      "test_gain_mean_pp": "-8.5753",
+      "n_seeds": "8"
+    },
+    {
+      "candidate": "R1_analytic_head",
+      "dataset": "uwave",
+      "s2_range4_mean_pp": "15.1042",
+      "test_gain_mean_pp": "3.9063",
+      "n_seeds": "8"
+    },
+    {
+      "candidate": "R1_analytic_head",
+      "dataset": "cwru",
+      "s2_range4_mean_pp": "6.7500",
+      "test_gain_mean_pp": "-9.9250",
+      "n_seeds": "8"
+    },
+    {
+      "candidate": "R2_pca16_readout",
+      "dataset": "uci_har",
+      "s2_range4_mean_pp": "4.4441",
+      "test_gain_mean_pp": "-1.0344",
+      "n_seeds": "8"
+    },
+    {
+      "candidate": "R2_pca16_readout",
+      "dataset": "wisdm",
+      "s2_range4_mean_pp": "7.3545",
+      "test_gain_mean_pp": "-9.2848",
+      "n_seeds": "8"
+    },
+    {
+      "candidate": "R2_pca16_readout",
+      "dataset": "uwave",
+      "s2_range4_mean_pp": "15.1042",
+      "test_gain_mean_pp": "3.1250",
+      "n_seeds": "8"
+    },
+    {
+      "candidate": "R2_pca16_readout",
+      "dataset": "cwru",
+      "s2_range4_mean_pp": "6.7500",
+      "test_gain_mean_pp": "-10.0875",
+      "n_seeds": "8"
+    }
+  ],
+  "notes": [
+    "No training, fitting, model forward, test reevaluation or new statistical test.",
+    "All quantitative geometry is deterministic and source-driven.",
+    "Framework waveform/vector thumbnails are labelled schematic and are not data results."
+  ],
+  "framework_asset": {
+    "method": "Built-in image_gen; detailed English prompt plus one visual refinement. Raster schematic; numerical plots remain data-driven vectors.",
+    "path": "${PROJECT_ROOT}\\paper\\draft\\c_evaluation_figure_redesign_v1_8_20261018\\design_reference\\framework_generated_final.png",
+    "sha256": "63669251db7fe4fe3e969d511e60c3fbed50df5e8f2ba4655c1d3115a4dffe4c",
+    "pixel_size": [
+      1983,
+      793
+    ],
+    "native_vector_alternative": "design_reference/framework_vector_alternative.svg",
+    "manual_invariants": [
+      "48-D attention output + 8 raw-window descriptors = joint56",
+      "R1 ridge56; R2 current-real PCA16 followed by ridge",
+      "R1/R2 directly eight seeds; training candidates only validation-screened",
+      "C1/WISDM promoted; fifteen cells remain three-seed",
+      "seal precedes held-out test; thumbnails schematic"
+    ],
+    "native_raster_at_print_width_dpi": 305.1
+  },
+  "figure_caps_textheight": [
+    0.31,
+    0.34,
+    0.3,
+    0.29
+  ]
+}

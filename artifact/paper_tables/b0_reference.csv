@@ -1,0 +1,5 @@
+dataset,n_seeds,b0_mean_percent,b0_seed_sd_pp
+uci_har,8,80.1694,1.2778
+wisdm,8,63.2522,2.6297
+uwave,8,42.9688,3.8744
+cwru,8,81.1625,0.7254

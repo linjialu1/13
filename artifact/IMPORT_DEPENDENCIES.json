@@ -1,0 +1,264 @@
+{
+  "method": "AST local imports at all nesting levels, plus inspected importlib/file-loader and naked archive pipeline dependencies; no training import executed.",
+  "entrypoints": [
+    "src/trunk/run_baseline_fix2.py",
+    "src/trunk/readout_sensitivity.py",
+    "src/trunk/s3_cli_fix6.py",
+    "src/trunk/s3_prod_fix6.py",
+    "src/trunk/s3_lock_fix6.py",
+    "src/trunk/s3_selftest_fix6.py",
+    "src/trunk/recover_checkpoint.py",
+    "src/analysis/s3_test_export.py",
+    "src/preflight_trunk_data.py",
+    "src/preflight_standardization.py",
+    "src/trunk/run_baseline.py",
+    "src/trunk/run_baseline_fix1.py"
+  ],
+  "files": [
+    {
+      "source": "src/trunk/run_baseline_fix2.py",
+      "project_dependencies": [
+        "src/trunk/acbm_interface.py",
+        "src/trunk/adapters.py",
+        "src/trunk/descriptors.py",
+        "src/trunk/train_smoke.py"
+      ],
+      "dynamic_dependencies_explicitly_accounted": []
+    },
+    {
+      "source": "src/trunk/readout_sensitivity.py",
+      "project_dependencies": [
+        "src/trunk/acbm_interface.py",
+        "src/trunk/adapters.py",
+        "src/trunk/descriptors.py",
+        "src/trunk/run_baseline_fix2.py",
+        "src/trunk/train_smoke.py"
+      ],
+      "dynamic_dependencies_explicitly_accounted": []
+    },
+    {
+      "source": "src/trunk/s3_cli_fix6.py",
+      "project_dependencies": [
+        "src/trunk/execution_gate_v7.py",
+        "src/trunk/run_baseline_fix2.py",
+        "src/trunk/s3_candidates_numpy_fix1.py",
+        "src/trunk/s3_prod_fix6.py"
+      ],
+      "dynamic_dependencies_explicitly_accounted": []
+    },
+    {
+      "source": "src/trunk/s3_prod_fix6.py",
+      "project_dependencies": [
+        "src/trunk/acbm_interface.py",
+        "src/trunk/descriptors.py",
+        "src/trunk/readout_sensitivity.py",
+        "src/trunk/run_baseline_fix2.py",
+        "src/trunk/s3_candidates_numpy_fix1.py",
+        "src/trunk/s3_candidates_torch_fix1.py",
+        "src/trunk/train_smoke.py"
+      ],
+      "dynamic_dependencies_explicitly_accounted": []
+    },
+    {
+      "source": "src/trunk/s3_lock_fix6.py",
+      "project_dependencies": [
+        "src/trunk/execution_gate_v7.py"
+      ],
+      "dynamic_dependencies_explicitly_accounted": []
+    },
+    {
+      "source": "src/trunk/s3_selftest_fix6.py",
+      "project_dependencies": [
+        "src/trunk/acbm_interface.py",
+        "src/trunk/execution_gate_v7.py",
+        "src/trunk/run_baseline_fix2.py",
+        "src/trunk/s3_candidates_torch_fix1.py",
+        "src/trunk/s3_cli_fix6.py",
+        "src/trunk/s3_lock_fix6.py",
+        "src/trunk/s3_prod_fix6.py",
+        "src/trunk/train_smoke.py"
+      ],
+      "dynamic_dependencies_explicitly_accounted": []
+    },
+    {
+      "source": "src/trunk/recover_checkpoint.py",
+      "project_dependencies": [
+        "src/trunk/acbm_interface.py",
+        "src/trunk/adapters.py",
+        "src/trunk/descriptors.py",
+        "src/trunk/train_smoke.py"
+      ],
+      "dynamic_dependencies_explicitly_accounted": []
+    },
+    {
+      "source": "src/analysis/s3_test_export.py",
+      "project_dependencies": [
+        "src/trunk/s3_candidates_numpy_fix1.py"
+      ],
+      "dynamic_dependencies_explicitly_accounted": []
+    },
+    {
+      "source": "src/preflight_trunk_data.py",
+      "project_dependencies": [
+        "src/legacy/benchmark.py"
+      ],
+      "dynamic_dependencies_explicitly_accounted": [
+        "src/legacy/benchmark.py"
+      ]
+    },
+    {
+      "source": "src/preflight_standardization.py",
+      "project_dependencies": [],
+      "dynamic_dependencies_explicitly_accounted": []
+    },
+    {
+      "source": "src/trunk/run_baseline.py",
+      "project_dependencies": [
+        "src/trunk/acbm_interface.py",
+        "src/trunk/adapters.py",
+        "src/trunk/descriptors.py",
+        "src/trunk/train_smoke.py"
+      ],
+      "dynamic_dependencies_explicitly_accounted": []
+    },
+    {
+      "source": "src/trunk/run_baseline_fix1.py",
+      "project_dependencies": [
+        "src/trunk/acbm_interface.py",
+        "src/trunk/adapters.py",
+        "src/trunk/descriptors.py",
+        "src/trunk/train_smoke.py"
+      ],
+      "dynamic_dependencies_explicitly_accounted": []
+    },
+    {
+      "source": "src/trunk/acbm_interface.py",
+      "project_dependencies": [
+        "experiments/archive/2026-10-13/cfc_acbm_t3_component_ablation_3seeds/pipeline.py",
+        "experiments/archive/stage4/refined/benchmark.py",
+        "src/benchmark.py",
+        "src/legacy/benchmark.py",
+        "src/trunk/descriptors.py"
+      ],
+      "dynamic_dependencies_explicitly_accounted": [
+        "experiments/archive/2026-10-13/cfc_acbm_t3_component_ablation_3seeds/pipeline.py",
+        "experiments/archive/stage4/refined/benchmark.py",
+        "src/benchmark.py",
+        "src/legacy/benchmark.py"
+      ]
+    },
+    {
+      "source": "src/trunk/adapters.py",
+      "project_dependencies": [
+        "src/preflight_standardization.py"
+      ],
+      "dynamic_dependencies_explicitly_accounted": []
+    },
+    {
+      "source": "src/trunk/descriptors.py",
+      "project_dependencies": [
+        "experiments/archive/2026-10-11/cfc_cbm_wisdm_original_vs_staged/run_wisdm.py",
+        "experiments/archive/stage4/refined/benchmark.py"
+      ],
+      "dynamic_dependencies_explicitly_accounted": [
+        "experiments/archive/stage4/refined/benchmark.py",
+        "experiments/archive/2026-10-11/cfc_cbm_wisdm_original_vs_staged/run_wisdm.py"
+      ]
+    },
+    {
+      "source": "src/trunk/train_smoke.py",
+      "project_dependencies": [
+        "src/trunk/acbm_interface.py",
+        "src/trunk/adapters.py",
+        "src/trunk/descriptors.py"
+      ],
+      "dynamic_dependencies_explicitly_accounted": []
+    },
+    {
+      "source": "src/trunk/execution_gate_v7.py",
+      "project_dependencies": [
+        "src/trunk/execution_gate_v3.py"
+      ],
+      "dynamic_dependencies_explicitly_accounted": []
+    },
+    {
+      "source": "src/trunk/s3_candidates_numpy_fix1.py",
+      "project_dependencies": [],
+      "dynamic_dependencies_explicitly_accounted": []
+    },
+    {
+      "source": "src/trunk/s3_candidates_torch_fix1.py",
+      "project_dependencies": [
+        "src/trunk/acbm_interface.py"
+      ],
+      "dynamic_dependencies_explicitly_accounted": []
+    },
+    {
+      "source": "src/legacy/benchmark.py",
+      "project_dependencies": [],
+      "dynamic_dependencies_explicitly_accounted": []
+    },
+    {
+      "source": "experiments/archive/2026-10-13/cfc_acbm_t3_component_ablation_3seeds/pipeline.py",
+      "project_dependencies": [
+        "src/legacy/benchmark.py",
+        "src/legacy/cicbm/benchmark.py"
+      ],
+      "dynamic_dependencies_explicitly_accounted": []
+    },
+    {
+      "source": "experiments/archive/stage4/refined/benchmark.py",
+      "project_dependencies": [],
+      "dynamic_dependencies_explicitly_accounted": []
+    },
+    {
+      "source": "src/benchmark.py",
+      "project_dependencies": [],
+      "dynamic_dependencies_explicitly_accounted": []
+    },
+    {
+      "source": "experiments/archive/2026-10-11/cfc_cbm_wisdm_original_vs_staged/run_wisdm.py",
+      "project_dependencies": [
+        "experiments/archive/2026-10-11/cfc_cbm_wisdm_original_vs_staged/pipeline.py",
+        "src/benchmark.py"
+      ],
+      "dynamic_dependencies_explicitly_accounted": []
+    },
+    {
+      "source": "src/trunk/execution_gate_v3.py",
+      "project_dependencies": [
+        "src/trunk/run_baseline_fix2.py"
+      ],
+      "dynamic_dependencies_explicitly_accounted": []
+    },
+    {
+      "source": "src/legacy/cicbm/benchmark.py",
+      "project_dependencies": [
+        "experiments/archive/stage4/refined/benchmark.py"
+      ],
+      "dynamic_dependencies_explicitly_accounted": [
+        "experiments/archive/stage4/refined/benchmark.py"
+      ]
+    },
+    {
+      "source": "experiments/archive/2026-10-11/cfc_cbm_wisdm_original_vs_staged/pipeline.py",
+      "project_dependencies": [
+        "src/legacy/benchmark.py",
+        "src/legacy/cicbm/benchmark.py"
+      ],
+      "dynamic_dependencies_explicitly_accounted": []
+    }
+  ],
+  "third_party_runtime_packages": [
+    "numpy",
+    "scipy",
+    "torch",
+    "ncps==1.0.1",
+    "matplotlib"
+  ],
+  "remaining_limitations": [
+    "This is a static dependency inventory, not execution proof.",
+    "Protocol hash gates also name private/historical inputs which are intentionally absent.",
+    "No external third-party repository, raw windows, checkpoint, or fitted weight array is included."
+  ]
+}

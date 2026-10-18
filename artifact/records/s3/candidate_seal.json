@@ -1,0 +1,905 @@
+{
+  "status": "SEALED",
+  "locked_sha256": "11692247f0d2fe87c3061b8790695265f4a76030cad7dc1d7814a3fa81df6c03",
+  "science_protocol_sha256": "995cf3e86c0d901884e3263daaad40b4bbd89b6acf1da17494e6dd1204ef53dc",
+  "n_cells": 24,
+  "cells": {
+    "R1_analytic_head__uci_har": {
+      "candidate": "R1_analytic_head",
+      "dataset": "uci_har",
+      "seeds_run": [
+        11,
+        22,
+        33,
+        44,
+        55,
+        66,
+        77,
+        88
+      ],
+      "state": "COMPLETE",
+      "assets": {
+        "11": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R1_analytic_head__uci_har\\seed11",
+          "result_sha256": "1ac3638787cb0f2b8de818eaf79c3e06c7e7eb5b6387e543090d36249a39702b"
+        },
+        "22": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R1_analytic_head__uci_har\\seed22",
+          "result_sha256": "e241757ad04fef9d6b510c6017019e94ed8610234fa4f7d298a049c5ce5f20f4"
+        },
+        "33": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R1_analytic_head__uci_har\\seed33",
+          "result_sha256": "b80b53c59b92a14cd81b4d265d7d57e18148c1e307403cfd37c4a3e4f4900633"
+        },
+        "44": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R1_analytic_head__uci_har\\seed44",
+          "result_sha256": "41fe62d7ad4e777a50f6a8e5cfc8ca1a7b4a6d34e4ec350b6a3a9ea669e5f454"
+        },
+        "55": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R1_analytic_head__uci_har\\seed55",
+          "result_sha256": "74b634f82a68bb481ef305de293d7e401dbdc6bdec87efaf593e5ea7e3cd708c"
+        },
+        "66": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R1_analytic_head__uci_har\\seed66",
+          "result_sha256": "a8448c570e52be439dfe5c0a98a0ce4b104ed3c646676c2908ecf26d7d71839c"
+        },
+        "77": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R1_analytic_head__uci_har\\seed77",
+          "result_sha256": "a490e2cfd3021a9a3db5c23241b7edc319737177386f0ff644c3dea1182b15bb"
+        },
+        "88": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R1_analytic_head__uci_har\\seed88",
+          "result_sha256": "939f06dee49ba3a5876b71a7d6d2c8bdb920dee3bbaa08e4ca9311cd55708668"
+        }
+      }
+    },
+    "R1_analytic_head__wisdm": {
+      "candidate": "R1_analytic_head",
+      "dataset": "wisdm",
+      "seeds_run": [
+        11,
+        22,
+        33,
+        44,
+        55,
+        66,
+        77,
+        88
+      ],
+      "state": "COMPLETE",
+      "assets": {
+        "11": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R1_analytic_head__wisdm\\seed11",
+          "result_sha256": "5f457b7f7fdd9c63830e941f46d42d4442a2e15e7571daec4f035b7c73b08df7"
+        },
+        "22": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R1_analytic_head__wisdm\\seed22",
+          "result_sha256": "c22387dc10ce73067ff6fc486246968f149a4f835bc99d2a4af6fe32f77046a3"
+        },
+        "33": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R1_analytic_head__wisdm\\seed33",
+          "result_sha256": "f09a9ca709a588c3ae44f8765e015f092758b2c13e3575bafd6cd537f21a3083"
+        },
+        "44": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R1_analytic_head__wisdm\\seed44",
+          "result_sha256": "4f7aa9934288ec3a062a7b72ee3f71cf67e5f71e47fc574410df586acafe85aa"
+        },
+        "55": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R1_analytic_head__wisdm\\seed55",
+          "result_sha256": "174b70e9021b139e4ebc3a6de2b34dc0b0c3d76779000758e953fd71d827996b"
+        },
+        "66": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R1_analytic_head__wisdm\\seed66",
+          "result_sha256": "08c4d127bf9b16090829d46e17cb966d55285f190662dbd53ccd5fbe6215a391"
+        },
+        "77": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R1_analytic_head__wisdm\\seed77",
+          "result_sha256": "d7f8724fc9a2f951e0c706d649a5b27a73b6752e32ab92ea7c9e0534c28a7c3c"
+        },
+        "88": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R1_analytic_head__wisdm\\seed88",
+          "result_sha256": "1dda19a18046e1e77700a3e45ba137732280b242c48ee634e1a215b1ab3a2718"
+        }
+      }
+    },
+    "R1_analytic_head__uwave": {
+      "candidate": "R1_analytic_head",
+      "dataset": "uwave",
+      "seeds_run": [
+        11,
+        22,
+        33,
+        44,
+        55,
+        66,
+        77,
+        88
+      ],
+      "state": "COMPLETE",
+      "assets": {
+        "11": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R1_analytic_head__uwave\\seed11",
+          "result_sha256": "1cbca3ad77a09416e3b1dec080f8dc3847f9a4dcb4c093588bf722834e029b70"
+        },
+        "22": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R1_analytic_head__uwave\\seed22",
+          "result_sha256": "a5ef113e0472e88e6c5e7ac8175d51df0ad08dbf7d74e18e0a35330d997f0411"
+        },
+        "33": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R1_analytic_head__uwave\\seed33",
+          "result_sha256": "097f996c600e55dbb81463c057fdb8534fb9d36297ee24560a6ee338cfbcf579"
+        },
+        "44": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R1_analytic_head__uwave\\seed44",
+          "result_sha256": "aa156059a7f953719f06b4791aa599adeb34379e02eeaac84a8b36b70144794b"
+        },
+        "55": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R1_analytic_head__uwave\\seed55",
+          "result_sha256": "ce2d12554f40bcf9caba4639c37ccba059a5bab01ecda67ee8a7ac6445839284"
+        },
+        "66": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R1_analytic_head__uwave\\seed66",
+          "result_sha256": "5b2a6861236ede65c1d485645e3a0f86d7beabb2e385e2cc4375ed35ebd4a8f4"
+        },
+        "77": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R1_analytic_head__uwave\\seed77",
+          "result_sha256": "5c6290793d9fb20063cc7409b858910906cace566bf51ed940fbe39c21d3c626"
+        },
+        "88": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R1_analytic_head__uwave\\seed88",
+          "result_sha256": "9d605c5fedd444638f15e33c57c1e5f5c8f62341baa7a61e0332f9917a2314f4"
+        }
+      }
+    },
+    "R1_analytic_head__cwru": {
+      "candidate": "R1_analytic_head",
+      "dataset": "cwru",
+      "seeds_run": [
+        11,
+        22,
+        33,
+        44,
+        55,
+        66,
+        77,
+        88
+      ],
+      "state": "COMPLETE",
+      "assets": {
+        "11": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R1_analytic_head__cwru\\seed11",
+          "result_sha256": "7c756b4136cd0c0bb2b1580cf98e1ff904f54ce0a70f9b754ef8aaf7ff12ed43"
+        },
+        "22": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R1_analytic_head__cwru\\seed22",
+          "result_sha256": "7f34d263a816acc48e6a45092bc4815c83eb37cb918db25cdcaa397b8400ad59"
+        },
+        "33": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R1_analytic_head__cwru\\seed33",
+          "result_sha256": "a18d16f547703740f2e27b77c5e19466de7be56cbe15e03b00887e65231aa4d8"
+        },
+        "44": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R1_analytic_head__cwru\\seed44",
+          "result_sha256": "46047c4c625628251c013a55286a5c3f357d500da61af6e1bef960dd5eba4495"
+        },
+        "55": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R1_analytic_head__cwru\\seed55",
+          "result_sha256": "be2623c0f0a04eac4394ad4de0fc31b29b54849cd2a987e5de9729c09bda687b"
+        },
+        "66": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R1_analytic_head__cwru\\seed66",
+          "result_sha256": "ecf039a6428f74be3cd0a06af707789da5773c3e2e790df60b89af2c355e818e"
+        },
+        "77": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R1_analytic_head__cwru\\seed77",
+          "result_sha256": "1b32bccb7365efd6e83e10d82bb33760e1ea542b63a1a38c9ea8e109309d5013"
+        },
+        "88": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R1_analytic_head__cwru\\seed88",
+          "result_sha256": "07be219d4cd103aa4b27d20cf0d201f3d31558e7dea246d72a2f269893dd2738"
+        }
+      }
+    },
+    "R2_pca16_readout__uci_har": {
+      "candidate": "R2_pca16_readout",
+      "dataset": "uci_har",
+      "seeds_run": [
+        11,
+        22,
+        33,
+        44,
+        55,
+        66,
+        77,
+        88
+      ],
+      "state": "COMPLETE",
+      "assets": {
+        "11": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R2_pca16_readout__uci_har\\seed11",
+          "result_sha256": "f5c405b054a959d88f1a634452f35e36b0d8eed0b0bbe7cf5667b0eacc3ff604"
+        },
+        "22": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R2_pca16_readout__uci_har\\seed22",
+          "result_sha256": "a6347bf601af33b3120e2eda6a25ed576394e85154040983c7bd1bfa531f441d"
+        },
+        "33": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R2_pca16_readout__uci_har\\seed33",
+          "result_sha256": "ca6f46468faa5c2b912da3b48df15e55241c8141a2013483d8130194d27cd260"
+        },
+        "44": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R2_pca16_readout__uci_har\\seed44",
+          "result_sha256": "ad4f9dd7459efd939032610bc1958cab84578382b299365c9f707eb510d8025a"
+        },
+        "55": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R2_pca16_readout__uci_har\\seed55",
+          "result_sha256": "f86794b249975b3a9b4ed5cb6bace0c4f3b4f3dc10c9c30bed3f8a72995772b7"
+        },
+        "66": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R2_pca16_readout__uci_har\\seed66",
+          "result_sha256": "b2f7aff3c3c3e2429656c6d9b75360bb1eb325a4d3a0590dfa4beaf6f3464b7f"
+        },
+        "77": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R2_pca16_readout__uci_har\\seed77",
+          "result_sha256": "91e9fff8b4f2167800cb3b32199aca30bc6a1ba1bfdb09777219bae448db87e5"
+        },
+        "88": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R2_pca16_readout__uci_har\\seed88",
+          "result_sha256": "85b52c6efb513ba0fb577d8cc0bc64e40859e01b1e541d88543722b36946e975"
+        }
+      }
+    },
+    "R2_pca16_readout__wisdm": {
+      "candidate": "R2_pca16_readout",
+      "dataset": "wisdm",
+      "seeds_run": [
+        11,
+        22,
+        33,
+        44,
+        55,
+        66,
+        77,
+        88
+      ],
+      "state": "COMPLETE",
+      "assets": {
+        "11": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R2_pca16_readout__wisdm\\seed11",
+          "result_sha256": "0d01b95a4aaac4c380755b4c4303540a14ad59d21af20b91441584187ad192cd"
+        },
+        "22": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R2_pca16_readout__wisdm\\seed22",
+          "result_sha256": "dc8be1fd3daa998c3527001121711d28e9eb182118a2bcb83c8c17af93700672"
+        },
+        "33": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R2_pca16_readout__wisdm\\seed33",
+          "result_sha256": "75dcdd2e40adf1fc516e7f381cdd2d38722b809cb19bd20c11fac88defecd220"
+        },
+        "44": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R2_pca16_readout__wisdm\\seed44",
+          "result_sha256": "b358dde62677bf461cc78f0fb87e29005c9936196c0b5d6cb9733f73f7c0321a"
+        },
+        "55": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R2_pca16_readout__wisdm\\seed55",
+          "result_sha256": "d1cd71852c0b6e7009dc6dba5674408a3eb54c8e1a6ffa5beedd5c4e060712f6"
+        },
+        "66": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R2_pca16_readout__wisdm\\seed66",
+          "result_sha256": "7a0e767c230122172b1cee0607eda71df7cf81d39100c29148370c49af239cd2"
+        },
+        "77": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R2_pca16_readout__wisdm\\seed77",
+          "result_sha256": "7c785183f12a7c2f829aa77acc8a948cc72d113c1c76349249475d3f6d270e4a"
+        },
+        "88": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R2_pca16_readout__wisdm\\seed88",
+          "result_sha256": "979899e020de8bd07289225cd40275a52f1f4fca1959ef41c83eee30dc4036eb"
+        }
+      }
+    },
+    "R2_pca16_readout__uwave": {
+      "candidate": "R2_pca16_readout",
+      "dataset": "uwave",
+      "seeds_run": [
+        11,
+        22,
+        33,
+        44,
+        55,
+        66,
+        77,
+        88
+      ],
+      "state": "COMPLETE",
+      "assets": {
+        "11": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R2_pca16_readout__uwave\\seed11",
+          "result_sha256": "1c5331df61c8ba7ea6fbb21b474f740153c48abdb64d690daa6414d66700ffd1"
+        },
+        "22": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R2_pca16_readout__uwave\\seed22",
+          "result_sha256": "a36a60d8e83fc870095e5d3bed77bb365b1b95b3097da694bc917b99df08c34a"
+        },
+        "33": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R2_pca16_readout__uwave\\seed33",
+          "result_sha256": "e09d1ea3102d7c0c7632bb62e33c2de86f4a19b4e14c257202c5e9452441f52d"
+        },
+        "44": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R2_pca16_readout__uwave\\seed44",
+          "result_sha256": "b91c02a0d219650bb5b2cc05b2bb746ae589067ca28fb6aba711afc4dcb70cb7"
+        },
+        "55": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R2_pca16_readout__uwave\\seed55",
+          "result_sha256": "05714af00e3414504faa32bde18aeee53987bf02418349068930c270c4b57865"
+        },
+        "66": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R2_pca16_readout__uwave\\seed66",
+          "result_sha256": "73c03f6b65e5ed2781c3a777a0da670a3db34196b53803f4fa0e4d59c649cc9a"
+        },
+        "77": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R2_pca16_readout__uwave\\seed77",
+          "result_sha256": "fcc4b2cb1c8c149914aa55c5e6f06d5223ae7afae1c5354883a2df7be8d1c32d"
+        },
+        "88": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R2_pca16_readout__uwave\\seed88",
+          "result_sha256": "91742191b94fafe948c8895ee5bfd8161ed132685099e67fd9beae1686cfd678"
+        }
+      }
+    },
+    "R2_pca16_readout__cwru": {
+      "candidate": "R2_pca16_readout",
+      "dataset": "cwru",
+      "seeds_run": [
+        11,
+        22,
+        33,
+        44,
+        55,
+        66,
+        77,
+        88
+      ],
+      "state": "COMPLETE",
+      "assets": {
+        "11": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R2_pca16_readout__cwru\\seed11",
+          "result_sha256": "32d8d8561a4a7642df9f5b171ff21c01dfcf7e7ef08cf5ca6202c98c55af17c7"
+        },
+        "22": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R2_pca16_readout__cwru\\seed22",
+          "result_sha256": "036b07bed42b1f3594d364b0f3f1bee29890336c36a19a5ee5f70021ac3eb474"
+        },
+        "33": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R2_pca16_readout__cwru\\seed33",
+          "result_sha256": "3946b50093c366914bce6e7d584489254eb66da86309c082fa8b0d2b46459499"
+        },
+        "44": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R2_pca16_readout__cwru\\seed44",
+          "result_sha256": "377f4bd6cf68e0c751f89492eb06609e6ca1815e811c2eecb21f30915a697395"
+        },
+        "55": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R2_pca16_readout__cwru\\seed55",
+          "result_sha256": "e1658e662b81cfec60ffe0976f2f267bd57a05f2038acec11ade4ff054ca2d56"
+        },
+        "66": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R2_pca16_readout__cwru\\seed66",
+          "result_sha256": "5f20a7bcb9292dbd15f6c116bf8cc88a64824787496315015f7e63cb0651998f"
+        },
+        "77": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R2_pca16_readout__cwru\\seed77",
+          "result_sha256": "f94d143c517236435c6ae7337248e89eacd5d6f31a08d83f5ca89e1005c097da"
+        },
+        "88": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\R2_pca16_readout__cwru\\seed88",
+          "result_sha256": "4e13d9dcf3c1063fd31a3544570740993d541c20e0d08f38b204d3e71bc015e4"
+        }
+      }
+    },
+    "LN_layernorm_injection__uci_har": {
+      "candidate": "LN_layernorm_injection",
+      "dataset": "uci_har",
+      "seeds_run": [
+        11,
+        22,
+        33
+      ],
+      "state": "SCREEN_FAIL",
+      "assets": {
+        "11": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\LN_layernorm_injection__uci_har\\seed11",
+          "result_sha256": "f4982d2b138b225bee1b85f2396c14bc8acc77bdcedda3152b413c380b520a17"
+        },
+        "22": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\LN_layernorm_injection__uci_har\\seed22",
+          "result_sha256": "e053b059bf028503b4c6cc679d9e6c5aa8409710caec249ce3f564c58a9c0eaf"
+        },
+        "33": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\LN_layernorm_injection__uci_har\\seed33",
+          "result_sha256": "2fa58baa582b84f7016f390fb2db249ca539288fc05676ad57a0fb6438957deb"
+        }
+      },
+      "screen_diffs": [
+        -0.07391792118010487,
+        -0.026070714586005295,
+        0.009304854793667827
+      ],
+      "promoted": false
+    },
+    "LN_layernorm_injection__wisdm": {
+      "candidate": "LN_layernorm_injection",
+      "dataset": "wisdm",
+      "seeds_run": [
+        11,
+        22,
+        33
+      ],
+      "state": "SCREEN_FAIL",
+      "assets": {
+        "11": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\LN_layernorm_injection__wisdm\\seed11",
+          "result_sha256": "33e0bba7b4a44e2d615c9d05fd0bef0cce61df4b91fb12f0f4cfac4d41a44625"
+        },
+        "22": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\LN_layernorm_injection__wisdm\\seed22",
+          "result_sha256": "e09dd8e3dc4130daba87ae7e1889729046774563c04035cadd4d721273c3d0cd"
+        },
+        "33": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\LN_layernorm_injection__wisdm\\seed33",
+          "result_sha256": "7cd20f58e049eb96daf96bd46cc8bc7a959754431e2aaf7109b872ee639b2196"
+        }
+      },
+      "screen_diffs": [
+        -0.012401266764088481,
+        0.024282647760925813,
+        0.020552700902142784
+      ],
+      "promoted": false
+    },
+    "LN_layernorm_injection__uwave": {
+      "candidate": "LN_layernorm_injection",
+      "dataset": "uwave",
+      "seeds_run": [
+        11,
+        22,
+        33
+      ],
+      "state": "SCREEN_FAIL",
+      "assets": {
+        "11": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\LN_layernorm_injection__uwave\\seed11",
+          "result_sha256": "2cef26097ad96d77c5d2376614b5e10e87f1ad27747f215c166071738b9ad020"
+        },
+        "22": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\LN_layernorm_injection__uwave\\seed22",
+          "result_sha256": "f9ff427ae7988ca64ef8cbb79d8df888c89cc926763f8241d2c315eb736cf0b4"
+        },
+        "33": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\LN_layernorm_injection__uwave\\seed33",
+          "result_sha256": "94a933099bc7b6543e3c474b4807492101f6bf13d0f3781f9e6a9aaed9dc6df7"
+        }
+      },
+      "screen_diffs": [
+        0.04166666666666663,
+        0.12500000000000006,
+        0.0
+      ],
+      "promoted": false
+    },
+    "LN_layernorm_injection__cwru": {
+      "candidate": "LN_layernorm_injection",
+      "dataset": "cwru",
+      "seeds_run": [
+        11,
+        22,
+        33
+      ],
+      "state": "SCREEN_FAIL",
+      "assets": {
+        "11": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\LN_layernorm_injection__cwru\\seed11",
+          "result_sha256": "bb814fa56c4e9d5b39a0dc76c9ce93fe25c9834ca5c4f685b1823b8209d68f7f"
+        },
+        "22": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\LN_layernorm_injection__cwru\\seed22",
+          "result_sha256": "6253e433e82f9792ee6ea91ab005549666735ef32c1b1f377819119e42bd231e"
+        },
+        "33": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\LN_layernorm_injection__cwru\\seed33",
+          "result_sha256": "1a1a21f0e0fdfb377042b53397f04f1b6b675211b66183376a2f78b95baf00c2"
+        }
+      },
+      "screen_diffs": [
+        0.0,
+        0.039999999999999925,
+        -0.0050000000000000044
+      ],
+      "promoted": false
+    },
+    "POOL_mean_pooling__uci_har": {
+      "candidate": "POOL_mean_pooling",
+      "dataset": "uci_har",
+      "seeds_run": [
+        11,
+        22,
+        33
+      ],
+      "state": "SCREEN_FAIL",
+      "assets": {
+        "11": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\POOL_mean_pooling__uci_har\\seed11",
+          "result_sha256": "68c1e416dd3b2d04943d93a694b43c86a3ed0ce745fa06eb2fc6c61b4fc1a1c1"
+        },
+        "22": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\POOL_mean_pooling__uci_har\\seed22",
+          "result_sha256": "77081f88e58facc7825ea0c494d5e8d98e1392e5aff152e911b0003878cd03c8"
+        },
+        "33": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\POOL_mean_pooling__uci_har\\seed33",
+          "result_sha256": "a59daab85584f65ea553ddbc8182e88d3619f2095c73fa5520d803111a18ec1c"
+        }
+      },
+      "screen_diffs": [
+        -0.04290107605782911,
+        -0.015607939138966076,
+        -0.03688885126144825
+      ],
+      "promoted": false
+    },
+    "POOL_mean_pooling__wisdm": {
+      "candidate": "POOL_mean_pooling",
+      "dataset": "wisdm",
+      "seeds_run": [
+        11,
+        22,
+        33
+      ],
+      "state": "SCREEN_FAIL",
+      "assets": {
+        "11": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\POOL_mean_pooling__wisdm\\seed11",
+          "result_sha256": "cfa009c90762fa7f1e0ece7e7fe6dfc555417e027815d73440d3e9715db3090d"
+        },
+        "22": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\POOL_mean_pooling__wisdm\\seed22",
+          "result_sha256": "d2b3667cfb28bae40f70a4e62683bd1b63ea905385c384715b1c58abfefbc9cc"
+        },
+        "33": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\POOL_mean_pooling__wisdm\\seed33",
+          "result_sha256": "1d7817cbd0a68f52d25b4a471d337e95c047a1069149ce5f03fe328cadca860e"
+        }
+      },
+      "screen_diffs": [
+        0.017147986480673394,
+        -0.015726449009549115,
+        0.07018896511153361
+      ],
+      "promoted": false
+    },
+    "POOL_mean_pooling__uwave": {
+      "candidate": "POOL_mean_pooling",
+      "dataset": "uwave",
+      "seeds_run": [
+        11,
+        22,
+        33
+      ],
+      "state": "SCREEN_FAIL",
+      "assets": {
+        "11": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\POOL_mean_pooling__uwave\\seed11",
+          "result_sha256": "e0f2295196a7e63936986f93fc1c141d450c1416c0fffc73bf2746fabe87a098"
+        },
+        "22": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\POOL_mean_pooling__uwave\\seed22",
+          "result_sha256": "a6c4c3a40cc6246244ad2b9b5fb671b2042e21d02b258ecb5da6b1db9fef67a1"
+        },
+        "33": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\POOL_mean_pooling__uwave\\seed33",
+          "result_sha256": "bfef02ca5cc36809fdec33f47982122d97518382373d7ff3e6c7c123a8259d4d"
+        }
+      },
+      "screen_diffs": [
+        0.125,
+        0.041666666666666685,
+        0.0
+      ],
+      "promoted": false
+    },
+    "POOL_mean_pooling__cwru": {
+      "candidate": "POOL_mean_pooling",
+      "dataset": "cwru",
+      "seeds_run": [
+        11,
+        22,
+        33
+      ],
+      "state": "SCREEN_FAIL",
+      "assets": {
+        "11": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\POOL_mean_pooling__cwru\\seed11",
+          "result_sha256": "885aefe488fc61c1b51dd417b2c2b6a772d4bbeae558f80202b470a355e7636f"
+        },
+        "22": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\POOL_mean_pooling__cwru\\seed22",
+          "result_sha256": "6892c529f080e2bc7caaf70c6f0faec5e5b702510819cda278bb560e60d6db29"
+        },
+        "33": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\POOL_mean_pooling__cwru\\seed33",
+          "result_sha256": "1016329bbdce5620cab1eb7d8c8b08556241fd9a55950e0c1b891e0c840c13e5"
+        }
+      },
+      "screen_diffs": [
+        0.0,
+        0.0050000000000000044,
+        0.010000000000000009
+      ],
+      "promoted": false
+    },
+    "C1_backbone_freeze__uci_har": {
+      "candidate": "C1_backbone_freeze",
+      "dataset": "uci_har",
+      "seeds_run": [
+        11,
+        22,
+        33
+      ],
+      "state": "SCREEN_FAIL",
+      "assets": {
+        "11": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\C1_backbone_freeze__uci_har\\seed11",
+          "result_sha256": "07724de382d04a79c98245450ca0b14c6cef5b68d72098f1fb32c989eb685f16"
+        },
+        "22": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\C1_backbone_freeze__uci_har\\seed22",
+          "result_sha256": "06da99e69d552ea88eb637f4fa9bc130a87615344d80257ef34fd92f3c812955"
+        },
+        "33": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\C1_backbone_freeze__uci_har\\seed33",
+          "result_sha256": "df1146313fec859f16f3f80a0def7f2dc57a3ee729a02520c0a64b7683c3021f"
+        }
+      },
+      "screen_diffs": [
+        -0.03106257785789046,
+        0.007776288430527689,
+        -0.017613167129906904
+      ],
+      "promoted": false
+    },
+    "C1_backbone_freeze__wisdm": {
+      "candidate": "C1_backbone_freeze",
+      "dataset": "wisdm",
+      "seeds_run": [
+        11,
+        22,
+        33,
+        44,
+        55,
+        66,
+        77,
+        88
+      ],
+      "state": "COMPLETE",
+      "assets": {
+        "11": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\C1_backbone_freeze__wisdm\\seed11",
+          "result_sha256": "3288b631588b21c2d4024b8a78fd476e1eed64a986a530d330133ffcbc0c9d3d"
+        },
+        "22": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\C1_backbone_freeze__wisdm\\seed22",
+          "result_sha256": "41c568b2f189259e3cd982bdad4d5b33d9a6f808c81cfd72bf71d9f54adf22ec"
+        },
+        "33": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\C1_backbone_freeze__wisdm\\seed33",
+          "result_sha256": "5e1aae80f51567da7598598722c43b797da42b7f8be7afd2bac8fb67a955112f"
+        },
+        "44": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\C1_backbone_freeze__wisdm\\seed44",
+          "result_sha256": "4bcac494febfdf7fc813458752c6156e55bf8e60da446d0a726ceecdfe1e97cb"
+        },
+        "55": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\C1_backbone_freeze__wisdm\\seed55",
+          "result_sha256": "18e922eb169beebe9e8893cc5fad0cf1e193fad50810381aa36b0d9f581f8944"
+        },
+        "66": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\C1_backbone_freeze__wisdm\\seed66",
+          "result_sha256": "04a24cfd90a4730140a9e1ba89430cbfe5d32b92d1a0edf25d04c4434bbca08b"
+        },
+        "77": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\C1_backbone_freeze__wisdm\\seed77",
+          "result_sha256": "e53a019057b09c66396f7a528bc505bb2f020a725031a785a6bbcadbded90387"
+        },
+        "88": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\C1_backbone_freeze__wisdm\\seed88",
+          "result_sha256": "11ca5c574552a1339b5d5d6f535ac5f4b2f425573569525a33e222dcbe9a2fc8"
+        }
+      },
+      "screen_diffs": [
+        0.0003875360188233534,
+        0.03144756719498876,
+        0.03752758567280001
+      ],
+      "promoted": true
+    },
+    "C1_backbone_freeze__uwave": {
+      "candidate": "C1_backbone_freeze",
+      "dataset": "uwave",
+      "seeds_run": [
+        11,
+        22,
+        33
+      ],
+      "state": "SCREEN_FAIL",
+      "assets": {
+        "11": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\C1_backbone_freeze__uwave\\seed11",
+          "result_sha256": "40717b0eb60e7d24110aab97adf7774998c62a09c1d297125b2259acbdfde4f2"
+        },
+        "22": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\C1_backbone_freeze__uwave\\seed22",
+          "result_sha256": "ba399b360ccf08154e8e57ccd3d1f0eb925e3fb988cfc60e543b1a64b40a2435"
+        },
+        "33": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\C1_backbone_freeze__uwave\\seed33",
+          "result_sha256": "cf602aad97c8b1a4b072083228a89c7cc92d1c5404fc7e0a5ad7f550d2740f44"
+        }
+      },
+      "screen_diffs": [
+        0.0,
+        0.041666666666666685,
+        -0.08333333333333337
+      ],
+      "promoted": false
+    },
+    "C1_backbone_freeze__cwru": {
+      "candidate": "C1_backbone_freeze",
+      "dataset": "cwru",
+      "seeds_run": [
+        11,
+        22,
+        33
+      ],
+      "state": "SCREEN_FAIL",
+      "assets": {
+        "11": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\C1_backbone_freeze__cwru\\seed11",
+          "result_sha256": "a16e62aaab9aaf51d0783d284ed2e071a8d9e08e5a1dd6a725e2d42077c81b33"
+        },
+        "22": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\C1_backbone_freeze__cwru\\seed22",
+          "result_sha256": "a999f05b4333759ca0e29c2872ce0bcd9f76de96f23d7f46988cf745ef421605"
+        },
+        "33": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\C1_backbone_freeze__cwru\\seed33",
+          "result_sha256": "c8d23651f10c9200b92bb94f1d9b02b2d5802454762051d105673b99f48d316e"
+        }
+      },
+      "screen_diffs": [
+        0.0,
+        0.025000000000000022,
+        0.014999999999999902
+      ],
+      "promoted": false
+    },
+    "C2_gru_backbone__uci_har": {
+      "candidate": "C2_gru_backbone",
+      "dataset": "uci_har",
+      "seeds_run": [
+        11,
+        22,
+        33
+      ],
+      "state": "SCREEN_FAIL",
+      "assets": {
+        "11": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\C2_gru_backbone__uci_har\\seed11",
+          "result_sha256": "6fa378be7788debab3c1d9b64878d52b7bb63201a8495e97748b145a1d64897a"
+        },
+        "22": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\C2_gru_backbone__uci_har\\seed22",
+          "result_sha256": "9525b82bbaedbc6109172b39f70ef905280e23ed8f4d164c6d5b70ade1c636de"
+        },
+        "33": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\C2_gru_backbone__uci_har\\seed33",
+          "result_sha256": "0336ecc6f07dce500a94116cd2ea725288ddad3effa6c31e3de2a33a21b101f0"
+        }
+      },
+      "screen_diffs": [
+        -0.0004555426661106976,
+        0.004693070892692441,
+        -0.024425375347560285
+      ],
+      "promoted": false
+    },
+    "C2_gru_backbone__wisdm": {
+      "candidate": "C2_gru_backbone",
+      "dataset": "wisdm",
+      "seeds_run": [
+        11,
+        22,
+        33
+      ],
+      "state": "SCREEN_FAIL",
+      "assets": {
+        "11": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\C2_gru_backbone__wisdm\\seed11",
+          "result_sha256": "0112f45875e50facbbecec54812b21b175d39d7a23aa7b6a678159e05eb7ae1e"
+        },
+        "22": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\C2_gru_backbone__wisdm\\seed22",
+          "result_sha256": "414bee4af0d6c1acce472d3469321cfa580da192c846ce9315f6716786ad523e"
+        },
+        "33": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\C2_gru_backbone__wisdm\\seed33",
+          "result_sha256": "45a523d727653f8561d8411a01d926d9579457e320623d252c9a4f81dd4272cb"
+        }
+      },
+      "screen_diffs": [
+        -0.03383291554823309,
+        0.029584020409349265,
+        0.029101711243984085
+      ],
+      "promoted": false
+    },
+    "C2_gru_backbone__uwave": {
+      "candidate": "C2_gru_backbone",
+      "dataset": "uwave",
+      "seeds_run": [
+        11,
+        22,
+        33
+      ],
+      "state": "SCREEN_FAIL",
+      "assets": {
+        "11": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\C2_gru_backbone__uwave\\seed11",
+          "result_sha256": "245686c17ca13d68132022e3006b7de30d83da304439d1f2b0e244c1f24fd4a8"
+        },
+        "22": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\C2_gru_backbone__uwave\\seed22",
+          "result_sha256": "c7987f61ebc71ea594ce882a187e4983152e978ec82246a8ed9f62cc02f49398"
+        },
+        "33": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\C2_gru_backbone__uwave\\seed33",
+          "result_sha256": "f1890741d1d8909d5c8eff34715be9a44e4d79d517484a30e9979c062f5d576f"
+        }
+      },
+      "screen_diffs": [
+        0.08333333333333331,
+        0.0,
+        -0.041666666666666685
+      ],
+      "promoted": false
+    },
+    "C2_gru_backbone__cwru": {
+      "candidate": "C2_gru_backbone",
+      "dataset": "cwru",
+      "seeds_run": [
+        11,
+        22,
+        33
+      ],
+      "state": "SCREEN_FAIL",
+      "assets": {
+        "11": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\C2_gru_backbone__cwru\\seed11",
+          "result_sha256": "c31c999019a22eda38851b52686176729b7ae0bd1e84df68615611e975737f8c"
+        },
+        "22": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\C2_gru_backbone__cwru\\seed22",
+          "result_sha256": "e7466c1281a1c7e242855071402440528d5fc50567711cb0a16ed8f453d11f68"
+        },
+        "33": {
+          "dir": "${PROJECT_ROOT}\\experiments\\matrix\\trunk_s3_run_ucihar_seed11\\runs\\C2_gru_backbone__cwru\\seed33",
+          "result_sha256": "b597b4347f6bb0d039d7ca251969ef18a2aec02e46e8ad51e3dc506909f62e4a"
+        }
+      },
+      "screen_diffs": [
+        -0.04499999999999993,
+        0.010000000000000009,
+        -0.010000000000000009
+      ],
+      "promoted": false
+    }
+  }
+}

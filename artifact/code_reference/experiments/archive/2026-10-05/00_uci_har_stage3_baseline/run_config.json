@@ -1,0 +1,26 @@
+{
+  "seed": 11,
+  "hidden_size": 48,
+  "batch_size": 128,
+  "evaluation_batch_size": 256,
+  "learning_rate": 0.001,
+  "min_epochs_per_task": 4,
+  "max_epochs_per_task": 50,
+  "early_stopping_patience": 3,
+  "min_delta_macro_accuracy": 0.005,
+  "min_delta_validation_loss": 0.001,
+  "validation_fraction_from_task_training_pool": 0.2,
+  "validation_split_seed": 20261004,
+  "diagnostic_fraction_per_class": 0.1,
+  "diagnostic_split_seed": 20261005,
+  "device": "cuda_if_available",
+  "seeds_to_run": [
+    11
+  ],
+  "conditions_to_run": [
+    "CfC_full_update",
+    "CfC_freeze_recurrent_after_task1",
+    "GRU_full_update"
+  ],
+  "rerun_completed_conditions": false
+}

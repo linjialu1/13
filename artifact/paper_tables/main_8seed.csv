@@ -1,0 +1,10 @@
+cell,candidate,dataset,n_seeds,mean_gain_pp,sd_gain_pp,strictly_positive,ci95_low_pp,ci95_high_pp,raw_p,holm24_p,holm_significant_at_0.05
+C1_backbone_freeze__wisdm,C1_backbone_freeze,wisdm,8,-0.4183,2.8073,2,-2.7653,1.9287,0.686106,1,no
+R1_analytic_head__cwru,R1_analytic_head,cwru,8,-9.9250,3.4192,0,-12.7835,-7.0665,7.72082e-05,0.00162137,yes
+R1_analytic_head__uci_har,R1_analytic_head,uci_har,8,1.3491,1.0901,7,0.4377,2.2604,0.00998792,0.179783,no
+R1_analytic_head__uwave,R1_analytic_head,uwave,8,3.9063,2.3085,8,1.9763,5.8362,0.00199837,0.0399673,yes
+R1_analytic_head__wisdm,R1_analytic_head,wisdm,8,-8.5753,2.4621,0,-10.6336,-6.5169,2.36134e-05,0.000566721,yes
+R2_pca16_readout__cwru,R2_pca16_readout,cwru,8,-10.0875,3.3577,0,-12.8946,-7.2804,6.18908e-05,0.0013616,yes
+R2_pca16_readout__uci_har,R2_pca16_readout,uci_har,8,-1.0344,1.4479,2,-2.2449,0.1760,0.0830366,1,no
+R2_pca16_readout__uwave,R2_pca16_readout,uwave,8,3.1250,2.2223,7,1.2671,4.9829,0.00534202,0.101498,no
+R2_pca16_readout__wisdm,R2_pca16_readout,wisdm,8,-9.2848,2.6663,0,-11.5139,-7.0558,2.36433e-05,0.000566721,yes

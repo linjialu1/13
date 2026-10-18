@@ -1,0 +1,7 @@
+candidate,family,needs_training,representation_relation,cells,seeds,status
+R1_analytic_head,readout,no,shares the S1 Task-1 representation; reuses the S2-fitted ridge (0 new fits in S3),4,8,COMPLETE
+R2_pca16_readout,readout,no,shares the S1 Task-1 representation; reuses the per-task S2 PCA16 + ridge,4,8,COMPLETE
+LN_layernorm_injection,CfC structure,yes,own Task-1 training and own centroids; LayerNorm after the encoder sequence,4,3,SCREEN_FAIL
+POOL_mean_pooling,CfC structure,yes,own Task-1 training and own centroids; mean pooling replaces attention,4,3,SCREEN_FAIL
+C1_backbone_freeze,CfC Task-1 mask,yes,own Task-1 training from the same-seed untrained init; only backbone frozen during Task-1,4,8 (WISDM) / 3 (others),COMPLETE (WISDM) + SCREEN_FAIL
+C2_gru_backbone,GRU backbone,yes,own Task-1 training and own centroids; single-layer GRU48 replaces the CfC encoder,4,3,SCREEN_FAIL

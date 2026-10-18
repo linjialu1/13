@@ -1,0 +1,5 @@
+dataset,input_channels,window_length,n_classes,n_tasks,new_classes_per_task,final_task_seen_test_rows,separation_level,membership_and_rows,split_source
+uci_har,9,128,6,3,2,2947,subject,16 train / 5 val / 9 test subjects; rows 5564 / 1788 / 2947,trunk_data_preflight/uci_har_fixed_split.npz + official subject_*.txt
+wisdm,3,128,6,3,2,5696,subject,32 train / 8 val / 11 test subjects; rows 15014 / 3547 / 5696,trunk_data_preflight/wisdm_fixed_split.npz + wisdm_row_provenance.csv
+uwave,3,315,8,4,2,320,row,rows 96 / 24 / 320 (12 / 3 / 40 per class); split file has no subject field,trunk_data_preflight/uwave_fixed_split.npz
+cwru,1,1024,10,5,2,2000,row,windows 1000 / 200 / 2000; raw-interval intersections 0 (same-record time-segment evaluation),trunk_data_preflight/cwru_window_index.csv + cwru_interval_intersection.json

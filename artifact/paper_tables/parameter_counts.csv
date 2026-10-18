@@ -1,0 +1,5 @@
+candidate,dataset,params_total_including_original_head,source_field
+C1_backbone_freeze,wisdm,31766,budget_v3_1.json records[].task1.params_total
+C2_gru_backbone,wisdm,7974,budget_v3_1.json records[].task1.params_total
+LN_layernorm_injection,wisdm,31862,budget_v3_1.json records[].task1.params_total
+POOL_mean_pooling,wisdm,31718,budget_v3_1.json records[].task1.params_total

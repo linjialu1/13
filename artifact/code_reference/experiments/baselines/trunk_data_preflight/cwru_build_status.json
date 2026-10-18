@@ -1,0 +1,243 @@
+{
+  "status": "BUILT",
+  "per_class": [
+    {
+      "label": 0,
+      "name": "D1_NC",
+      "train": 100,
+      "validation": 20,
+      "test": 200,
+      "t_split": 85799,
+      "train_segment": [
+        0,
+        85799
+      ],
+      "guard": [
+        85799,
+        86823
+      ],
+      "val_segment": [
+        86823,
+        97575
+      ],
+      "test_segment_starts": 98599
+    },
+    {
+      "label": 1,
+      "name": "D1_IF007",
+      "train": 100,
+      "validation": 20,
+      "test": 200,
+      "t_split": 85799,
+      "train_segment": [
+        0,
+        85799
+      ],
+      "guard": [
+        85799,
+        86823
+      ],
+      "val_segment": [
+        86823,
+        97575
+      ],
+      "test_segment_starts": 98599
+    },
+    {
+      "label": 2,
+      "name": "D1_OF007_6oclock",
+      "train": 100,
+      "validation": 20,
+      "test": 200,
+      "t_split": 85639,
+      "train_segment": [
+        0,
+        85639
+      ],
+      "guard": [
+        85639,
+        86663
+      ],
+      "val_segment": [
+        86663,
+        97415
+      ],
+      "test_segment_starts": 98439
+    },
+    {
+      "label": 3,
+      "name": "D1_BF007",
+      "train": 100,
+      "validation": 20,
+      "test": 200,
+      "t_split": 86119,
+      "train_segment": [
+        0,
+        86119
+      ],
+      "guard": [
+        86119,
+        87143
+      ],
+      "val_segment": [
+        87143,
+        97895
+      ],
+      "test_segment_starts": 98919
+    },
+    {
+      "label": 4,
+      "name": "D2_IF021",
+      "train": 100,
+      "validation": 20,
+      "test": 200,
+      "t_split": 182249,
+      "train_segment": [
+        0,
+        182249
+      ],
+      "guard": [
+        182249,
+        183273
+      ],
+      "val_segment": [
+        183273,
+        194025
+      ],
+      "test_segment_starts": 195049
+    },
+    {
+      "label": 5,
+      "name": "D2_OF021_6oclock",
+      "train": 100,
+      "validation": 20,
+      "test": 200,
+      "t_split": 183874,
+      "train_segment": [
+        0,
+        183874
+      ],
+      "guard": [
+        183874,
+        184898
+      ],
+      "val_segment": [
+        184898,
+        195650
+      ],
+      "test_segment_starts": 196674
+    },
+    {
+      "label": 6,
+      "name": "D3_IF021",
+      "train": 100,
+      "validation": 20,
+      "test": 200,
+      "t_split": 184802,
+      "train_segment": [
+        0,
+        184802
+      ],
+      "guard": [
+        184802,
+        185826
+      ],
+      "val_segment": [
+        185826,
+        196578
+      ],
+      "test_segment_starts": 197602
+    },
+    {
+      "label": 7,
+      "name": "D3_OF021_6oclock",
+      "train": 100,
+      "validation": 20,
+      "test": 200,
+      "t_split": 183409,
+      "train_segment": [
+        0,
+        183409
+      ],
+      "guard": [
+        183409,
+        184433
+      ],
+      "val_segment": [
+        184433,
+        195185
+      ],
+      "test_segment_starts": 196209
+    },
+    {
+      "label": 8,
+      "name": "D4_IF014",
+      "train": 100,
+      "validation": 20,
+      "test": 200,
+      "t_split": 182249,
+      "train_segment": [
+        0,
+        182249
+      ],
+      "guard": [
+        182249,
+        183273
+      ],
+      "val_segment": [
+        183273,
+        194025
+      ],
+      "test_segment_starts": 195049
+    },
+    {
+      "label": 9,
+      "name": "D4_OF014_6oclock",
+      "train": 100,
+      "validation": 20,
+      "test": 200,
+      "t_split": 183642,
+      "train_segment": [
+        0,
+        183642
+      ],
+      "guard": [
+        183642,
+        184666
+      ],
+      "val_segment": [
+        184666,
+        195418
+      ],
+      "test_segment_starts": 196442
+    }
+  ],
+  "intersections": {
+    "train_vs_validation": 0,
+    "train_vs_test": 0,
+    "validation_vs_test": 0
+  },
+  "sampling_seed": 20261015,
+  "tasks": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      8,
+      9
+    ]
+  ]
+}

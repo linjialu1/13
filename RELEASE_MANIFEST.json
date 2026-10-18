@@ -1,0 +1,9 @@
+{
+  "release_date_local": "2026-10-19",
+  "artifact_files": 160,
+  "zip_file": "downloads/reproducibility_supplement_v1_20261019.zip",
+  "zip_bytes": 1413772,
+  "zip_sha256": "a3bfd8c523b6597086d3ee5882487ea5772afdb7c97355ac0446c6e7b5299ebc",
+  "artifact_manifest_sha256": "0ff1d93e8a06968e214430bdd92661279a63d6d5cba594f004dae1411084eb1a",
+  "scope": "Public saved-evidence/source distribution. Not an independent model retraining or open-source license grant."
+}

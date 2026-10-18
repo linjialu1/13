@@ -1,0 +1,81 @@
+{
+ "cells": {},
+ "problems": [],
+ "holm": {
+  "family_size": 24,
+  "n_cells_corrected": 9,
+  "cells": {
+   "R1_analytic_head__wisdm": {
+    "raw_p": 2.3613355376836746e-05,
+    "adjusted_p": 0.0005667205290440819,
+    "rank": 1
+   },
+   "R2_pca16_readout__wisdm": {
+    "raw_p": 2.3643345797784105e-05,
+    "adjusted_p": 0.0005667205290440819,
+    "rank": 2
+   },
+   "R2_pca16_readout__cwru": {
+    "raw_p": 6.189080642502069e-05,
+    "adjusted_p": 0.0013615977413504552,
+    "rank": 3
+   },
+   "R1_analytic_head__cwru": {
+    "raw_p": 7.72081605839963e-05,
+    "adjusted_p": 0.0016213713722639225,
+    "rank": 4
+   },
+   "R1_analytic_head__uwave": {
+    "raw_p": 0.0019983662839187727,
+    "adjusted_p": 0.03996732567837545,
+    "rank": 5
+   },
+   "R2_pca16_readout__uwave": {
+    "raw_p": 0.005342020866961061,
+    "adjusted_p": 0.10149839647226017,
+    "rank": 6
+   },
+   "R1_analytic_head__uci_har": {
+    "raw_p": 0.00998792491772599,
+    "adjusted_p": 0.1797826485190678,
+    "rank": 7
+   },
+   "R2_pca16_readout__uci_har": {
+    "raw_p": 0.0830366065077879,
+    "adjusted_p": 1.0,
+    "rank": 8
+   },
+   "C1_backbone_freeze__wisdm": {
+    "raw_p": 0.6861059639939686,
+    "adjusted_p": 1.0,
+    "rank": 9
+   }
+  },
+  "note": "fixed family 24; only the 9 cells that reached 8 seeds receive p-values; weights run 24 down to 16"
+ },
+ "status": "PASS",
+ "r2_minus_r1_note": "descriptive paired contrast, NOT part of family 24; no adjusted p, no rejection claim",
+ "s4": {
+  "units": 4,
+  "n_s2_endpoint_files": 32,
+  "per_dataset_range_4_mean": {
+   "uci_har": 0.044440789445673784,
+   "wisdm": 0.07354481764603277,
+   "uwave": 0.15104166666666669,
+   "cwru": 0.0675
+  },
+  "rho_R1": {
+   "rho": 0.4,
+   "n": 4,
+   "status": "OK",
+   "ties": 0
+  },
+  "rho_R2": {
+   "rho": 0.4,
+   "n": 4,
+   "status": "OK",
+   "ties": 0
+  },
+  "note": "top-level units are the 4 datasets; n=4 gives no population inference and no n=88 independence"
+ }
+}

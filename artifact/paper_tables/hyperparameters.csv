@@ -1,0 +1,26 @@
+item,value
+encoder_optimizer,Adam
+encoder_lr,0.001
+encoder_batch,128
+encoder_grad_clip,5.0
+encoder_min_epochs,3
+encoder_max_epochs,12
+encoder_patience,2
+encoder_val_delta_acc,0.005
+encoder_val_delta_loss,0.001
+head_optimizer,Adam
+head_lr,0.05
+head_epochs,300 (full-batch)
+head_l1_weight_only,0.0007
+ridge_lambda,0.001
+ridge_dtype,float64
+ridge_bias_penalised,no
+pca_dim,16
+eval_batch,256
+input_stats_ddof,0
+input_stats_denominator,std + 1e-6
+descriptor_clip,"clip((d-mean)/(std+1e-3), -6, 6)"
+t_crit_df7,2.3646242515927853
+holm_family,24
+seeds_8,11 22 33 44 55 66 77 88
+seeds_screen,11 22 33

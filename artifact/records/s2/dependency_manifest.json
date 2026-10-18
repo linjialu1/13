@@ -1,0 +1,13 @@
+{
+  "src_or_admin/readout_sensitivity.py": "dfc5d6c793769fb12c6b583ee74ba696f397af1611521e7033e901c6f68f6e02",
+  "src_or_admin/run_baseline_fix2.py": "7942c2e629067fd40fc9a3ab4d6fd2928cd45c4ec5edd02525e4fd79fca63bfc",
+  "src_or_admin/train_smoke.py": "2c3a8225af377c558cc91da5d1227af392917038a43aa7f771ea8b96216b7df4",
+  "src_or_admin/acbm_interface.py": "8e517985faa30148924ede7f27cb83abfc38e81700f453b7e5db33db073039ea",
+  "src_or_admin/descriptors.py": "0328f265764b311aa28c5b269cef93b6386fbd599dc7975916fa4c272d18d6de",
+  "src_or_admin/adapters.py": "3341155154b62342e857d246dace2e848736cc5944d2d0bce270b9e434224fb1",
+  "src_or_admin/preflight_standardization.py": "c86756ffd04b80c66ad0d7576d78ebfde5272349891b729bbf8922b74c644a49",
+  "src_or_admin/REVIEW_s2_protocol.md": "fa2776460febc51ddfebb26aa0e6f317159ecd80e58dcb27376342d74a24ce75",
+  "src_or_admin/REVIEW_s1_complete_and_s2_protocol.md": "aebd691bd7555cf854e49792e65bbda0733436299a704540aecad07d30c254a4",
+  "src_or_admin/AGENTS.md": "3fa265f1faf32aacbf3f473fa21cb3dac1e4b3ae21c425296c00b6ffcb086dba",
+  "src_or_admin/MAIN_TRUNK.md": "af6570180832bde3016f5cafe01bde9b4e42ac5d67c9c502d3e9baff0c3a5f43"
+}

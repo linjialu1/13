@@ -1,0 +1,5 @@
+# Optional dependencies for inspecting the historical author-side model code.
+# Not a validated portable retraining lock; see README and recorded environment CSV.
+-r requirements.txt
+torch
+ncps==1.0.1

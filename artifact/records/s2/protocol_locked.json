@@ -1,0 +1,233 @@
+{
+  "status": "LOCKED",
+  "note": "待 Codex 验收后锁定执行；本轮零研究模型前向、零探针拟合、零候选训练、零新敏感度计算。",
+  "version": "s2_readout_sensitivity_v3_counterfix_proposed",
+  "output_dir": "experiments/sensitivity/trunk_readout_sensitivity_protocol",
+  "parent_s1": {
+    "results_dir": "experiments/baselines/trunk_baseline_4datasets",
+    "locked_protocol_sha256": "ebebe0434558adb0e9d8a13b187a6235f4b2934e01d21a823d37533091bc5348",
+    "training_seal_sha256": "9f69d19fc13eb7d4a693c220a1d629f39771efc14ecf92231150d0beb0878540",
+    "runner_sha256": "7942c2e629067fd40fc9a3ab4d6fd2928cd45c4ec5edd02525e4fd79fca63bfc"
+  },
+  "main_scheme": "冻结 S1 表示、零梯度的解析式读出诊断（freeze-then-closed-form-readout）",
+  "frozen": [
+    "CfC encoder (48)",
+    "temporal attention",
+    "original head",
+    "descriptor stats",
+    "input standardization stats",
+    "S1 saved class centroids"
+  ],
+  "gradient_updates": 0,
+  "has_data_fitting": true,
+  "data_fitting_declaration": "变换统计/PCA/probe 参数使用当前任务真实训练数据闭式估计；不是无数据拟合，也不是无参数拟合",
+  "views": {
+    "D1_joint56": {
+      "input": "frozen S1 joint (48 latent + 8 descriptor)",
+      "dim": 56,
+      "transform": "identity",
+      "fit": "none"
+    },
+    "D2_gaussian_rp16": {
+      "input": "joint",
+      "dim": 16,
+      "transform": "fixed Gaussian random projection, N(0,1)/sqrt(16)",
+      "centered_by": "current-task real-train joint mean",
+      "matrix_seed": "s*1000 + task",
+      "fit": "mean only (real train joint)"
+    },
+    "D3_pca16": {
+      "input": "joint",
+      "dim": 16,
+      "transform": "PCA to 16 (float64 centering + SVD)",
+      "fit_on": "current-task real-train joint ONLY (pseudo rows excluded)",
+      "recorded": [
+        "singular values",
+        "numerical rank"
+      ],
+      "rule": "不因结果改变维数；低秩/秩不足逐边界记录并按预登记异常规则停止，不以 S2 准确率调整"
+    },
+    "D4_standardized56": {
+      "input": "joint",
+      "dim": 56,
+      "transform": "per-dim mean/std of current-task real-train joint",
+      "denominator": "population std + 1e-6",
+      "fit": "mean + std"
+    },
+    "shared_training_matrix": "原 pooled_shift 规则、已保存旧类质心 + 当前新类全部真实训练 joint 生成一份共同训练矩阵；四视图共享同一矩阵与标签",
+    "excluded_from_transform_stats": "旧类伪特征行（仅过变换，不参与变换统计）"
+  },
+  "fixed_dim_rationale": "16 维依据最小当前真实训练规模（UWave 24 行）与共同 joint56 预先固定，而非 S1 测试性能；逐任务验证结构可行性，异常预登记",
+  "probe": {
+    "type": "multi-class ridge regression to one-hot targets (closed form, zero gradient)",
+    "loss": "||XW + b - Y||^2 / n + lambda * ||W||^2  (bias not penalized)",
+    "lambda": 0.001,
+    "lambda_status": "待验收的预先固定设定；不以 S2/测试表现调参",
+    "solver": "center X and Y in float64, solve linear system (no explicit matrix inversion); b recovered from means",
+    "targets": "one-hot over all seen classes, column mapping = seen class ids ascending",
+    "prediction": "argmax over all seen classes",
+    "dtype": "float64 accumulation; float32 inputs upcast",
+    "finite_checks": "X, Y, W, b, predictions all finite; NaN/Inf stop",
+    "ill_conditioning_rule": "记录条件数；秩不足/奇异即停止并报告，不换 solver、维数、lambda 或数据范围",
+    "relation_to_s1_head": "与 S1 的 300 epoch L1 头不同；D1 不是 S1 保存头的性能复制；四视图同一 probe 以控制读出求解规则"
+  },
+  "information_access": {
+    "per_boundary": [
+      "saved old-class centroids (from S1 state package)",
+      "current new-class ALL real train joint",
+      "原 pooled_shift 规则生成共同训练矩阵（四视图共享）",
+      "validation split members of ALL seen classes (fixed accepted val split)"
+    ],
+    "forbidden": [
+      "旧类真实训练数据访问（重算质心或加入 probe 训练均禁止）",
+      "未来任务的训练/验证成员在本边界参与拟合或评价",
+      "S1 已公布测试性能用于选视图/维数/lambda",
+      "未来 S3 候选结果读取"
+    ],
+    "task1_validation_note": "Task1 验证已用于基线早停，该事实如实记录；验证侧指标仍可用于描述性敏感度，不参与任何选择"
+  },
+  "metrics": {
+    "primary": "同一 (dataset, seed, boundary) 四视图验证宏准确率的极差 range_4，展示 pp",
+    "secondary": "四视图间 SD(ddof1)；与极差不做相除",
+    "scope": "全部 15 边界 × 8 种子均报告（480 单元）；增量边界 11 个（2+2+3+4）为后续增量关联主范围，Task1 作对照",
+    "endpoint_stability": {
+      "definition": "终点敏感度 S_end = range_4 at final task",
+      "W": "sqrt(mean_dataset(var_seed(S_end, ddof1)))",
+      "B": "SD_dataset(mean_seed(S_end), ddof1)",
+      "stability_gate": "W < B（待验收操作化提案）",
+      "report": "W/B 比值 + 全部逐 seed 值",
+      "rule": "定义在看结果前固定；未过门槛降级为描述性结论并留档，不换定义"
+    },
+    "leakage_rule": "主指标仅用验证准确率构造；不使用 S1 测试性能选任何设定；不读取 S3 结果；测试侧敏感度如需只能另行预注册为描述性补充"
+  },
+  "structure_feasibility": {
+    "min_real_train_rows": {
+      "uwave": 24,
+      "uci_har": 1684,
+      "wisdm": 5344,
+      "cwru": 200
+    },
+    "joint_dim": 56,
+    "view_dim": 16,
+    "boundary_units": {
+      "total": 15,
+      "incremental": 11
+    },
+    "pca_rank_check": "D3 逐边界记录数值秩；秩 < 16 记录为低秩边界（照常输出，不改变维数）"
+  },
+  "execution_zero_now": {
+    "research_model_forward": 0,
+    "probe_fit": 0,
+    "candidate_training": 0,
+    "new_sensitivity_computed": 0,
+    "read_only_checks_done": [
+      "adapter member counts",
+      "checkpoint schema",
+      "state package shapes",
+      "cache existence"
+    ]
+  },
+  "revisions": {
+    "count_units": "120 boundary-seed units = (3+3+4+5)x8; 480 ridge; 360 transform stage ops (120 RP matrices, 120 SVD, 120 standardizations) = 840 named fit-stage ops",
+    "validation_scope": "cumulative all-seen validation rows per boundary (fixed review table), never only current-new-class validation; no test features/predictions/accuracy",
+    "low_rank": "D3 always outputs 16 columns; singular values <= tol zeroed; low rank is a warning (continue); only SVD failure/non-finite stops; ridge design-matrix low rank is not a failure",
+    "legacy_pca": "old Jacobi returned at most 56 columns (index slice); out_dim>56 was nominal extrapolation, never executed on UWave/CWRU; old validation covered only current new classes",
+    "s4_units": "top-level unit fixed = 4 datasets; 88 points are repeated measurements (descriptive only); no 'always correlated' / 'fully decoupled' claims; complete S4 decision rule to be registered before S3 candidate results",
+    "budgets": "execution asset table with full member-ID hashes, per-boundary validation counts, full SHA256; separate algorithm-parameter / diagnostic / transient / process-peak memory"
+  },
+  "numeric_rules": {
+    "D2": "np.random.default_rng(seed*1000+task); 56x16 float64 Gaussian / sqrt(16); center = current real-train joint float64 mean",
+    "D3": "float64 centering + np.linalg.svd(full_matrices=False); tol=max(n,56)*eps64*s_max; take first 16 right singular vectors; columns with s<=tol zeroed; fixed 16 output columns; record effective rank/zeroed columns/all singular values; projection matrix saved",
+    "D4": "float64 mean + population std, denominator std+1e-6, no extra clipping",
+    "views_output": "float64 into probe",
+    "ridge": "Xc=X-mean(X); Yc=Y-mean(Y); A=Xc.T@Xc/n+1e-3*I; B=Xc.T@Yc/n; W=solve(A,B); b=mean(Y)-mean(X)@W; condition number recorded; lambda never reselected",
+    "backward_error": "eta=norm(AW-B,inf)/(norm(A,inf)*norm(W,inf)+norm(B,inf)); threshold 100*p*eps64; 0/0 -> 0; else inf; exceeding stops",
+    "seen_order": "canonical ascending; argmax ties -> smallest id; macro = mean per-class recall",
+    "gate": "W=sqrt(mean_dataset(var_seed(S_end,ddof1))); B=SD_dataset(mean_seed(S_end),ddof1); strict W<B; B=0 -> FAIL with POSITIVE_OVER_ZERO / ZERO_OVER_ZERO ratio=null; no Infinity/NaN in JSON; endpoint means reported with ties并列 by fixed dataset order",
+    "gate_scope": "W<B only compares between/within dispersion of this batch's endpoint sensitivity; not pairwise separability, not predictive ability, not population extrapolation"
+  },
+  "expected_budget": {
+    "boundary_seed_units": 120,
+    "ridge_fits": 480,
+    "encoder_batches": 1152,
+    "per_seed_encoder_batches": {
+      "uci_har": 38,
+      "wisdm": 88,
+      "uwave": 8,
+      "cwru": 10
+    },
+    "transform_stage_ops": 360,
+    "gradient_updates": 0,
+    "test_feature_or_prediction": 0,
+    "encoder_batch_table": {
+      "uci_har": {
+        "train": [
+          1684,
+          1735,
+          2145
+        ],
+        "val_cum": [
+          615,
+          1152,
+          1788
+        ]
+      },
+      "wisdm": {
+        "train": [
+          5344,
+          4826,
+          4844
+        ],
+        "val_cum": [
+          1238,
+          2392,
+          3547
+        ]
+      },
+      "uwave": {
+        "train": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "val_cum": [
+          6,
+          12,
+          18,
+          24
+        ]
+      },
+      "cwru": {
+        "train": [
+          200,
+          200,
+          200,
+          200,
+          200
+        ],
+        "val_cum": [
+          40,
+          80,
+          120,
+          160,
+          200
+        ]
+      }
+    }
+  },
+  "locked_before_any_real_forward": true,
+  "dependency_sha256": {
+    "src_or_admin/readout_sensitivity.py": "dfc5d6c793769fb12c6b583ee74ba696f397af1611521e7033e901c6f68f6e02",
+    "src_or_admin/run_baseline_fix2.py": "7942c2e629067fd40fc9a3ab4d6fd2928cd45c4ec5edd02525e4fd79fca63bfc",
+    "src_or_admin/train_smoke.py": "2c3a8225af377c558cc91da5d1227af392917038a43aa7f771ea8b96216b7df4",
+    "src_or_admin/acbm_interface.py": "8e517985faa30148924ede7f27cb83abfc38e81700f453b7e5db33db073039ea",
+    "src_or_admin/descriptors.py": "0328f265764b311aa28c5b269cef93b6386fbd599dc7975916fa4c272d18d6de",
+    "src_or_admin/adapters.py": "3341155154b62342e857d246dace2e848736cc5944d2d0bce270b9e434224fb1",
+    "src_or_admin/preflight_standardization.py": "c86756ffd04b80c66ad0d7576d78ebfde5272349891b729bbf8922b74c644a49",
+    "src_or_admin/REVIEW_s2_protocol.md": "fa2776460febc51ddfebb26aa0e6f317159ecd80e58dcb27376342d74a24ce75",
+    "src_or_admin/REVIEW_s1_complete_and_s2_protocol.md": "aebd691bd7555cf854e49792e65bbda0733436299a704540aecad07d30c254a4",
+    "src_or_admin/AGENTS.md": "3fa265f1faf32aacbf3f473fa21cb3dac1e4b3ae21c425296c00b6ffcb086dba",
+    "src_or_admin/MAIN_TRUNK.md": "af6570180832bde3016f5cafe01bde9b4e42ac5d67c9c502d3e9baff0c3a5f43"
+  }
+}
